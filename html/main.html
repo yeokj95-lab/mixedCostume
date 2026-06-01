@@ -5,6 +5,13 @@
 	<title>Dropbox 선택</title>
 </head>
 <body>
-test   main
+<div id="content"></div>
 </body>
+<script>
+fetch('./data/content.txt')
+  .then(res => res.text())
+  .then(text => {
+    document.getElementById('content').innerText = text;
+  });
+</script>
 </html>
