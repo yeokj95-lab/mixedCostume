@@ -9,21 +9,205 @@
 	<title>Dropbox 선택</title>
 </head>
 <body>
-	<button onclick="copyText()">복사</button>
+<table>
+	<tr>
+		<th>포즈</th>
+		<td><select id="pose" style="width:400px;">
+		</select></td>
+	</tr>
+	<tr>
+		<th>의상</th>
+		<td><select id="clothes" style="width:400px;">
+		</select></td>
+	</tr>
+	<tr>
+		<th>배경</th>
+		<td><select id="background" style="width:400px;">
+		</select></td>
+	</tr>
+	<tr><td colspan=2><hr></td></tr>
+	<tr>
+		<td colspan=2 align="center">
+			<button onclick="generateText()">생성</button>
+			<button onclick="copyText()">복사</button>
+			<button onclick="window.location.reload()">초기화</button>
+		</td>
+	</tr>
+	<tr><td colspan=2><hr></td></tr>
+	<tr>
+		<td colspan=2 align="center">
+			<label for="mem1"><input type="radio" id="mem1" name="mem_radio" value="1"><span> 2~3인</span></label>
+			<label for="mem2"><input type="radio" id="mem2" name="mem_radio" value="2" checked><span> 2인</span></label>
+			<label for="mem3"><input type="radio" id="mem3" name="mem_radio" value="3"><span> 3인</span></label>
+			<label for="mem4"><input type="radio" id="mem4" name="mem_radio" value="4"><span> 4인</span></label>
+			<label for="mem5"><input type="radio" id="mem5" name="mem_radio" value="5"><span> 5인</span></label>
+			<label for="mem6"><input type="radio" id="mem6" name="mem_radio" value="6"><span> 6인</span></label>
+		</td>
+	</tr>
+	<tr>
+		<td colspan=2 align="center">
+			<button onclick="generateMultiText(1)">포즈, 의상 무작위</button>
+			<button onclick="generateMultiText(2)">포즈 무작위</button>
+			<button onclick="generateMultiText(3)">의상 무작위</button>
+		</td>
+	</tr>
+	<tr><td colspan=2><hr></td></tr>
+	<tr>
+		<td colspan=2 align="center">
+			<table>
+				<tr>
+					<td><input type="checkbox" id="who1" name="who" value="로슬린"><span class="char_span">로슬린</span></td>
+					<td><input type="checkbox" id="who2" name="who" value="로웬타"><span class="char_span">로웬타</span></td>
+					<td><input type="checkbox" id="who3" name="who" value="리얼"><span class="char_span">리얼</span></td>
+					<td><input type="checkbox" id="who4" name="who" value="마치"><span class="char_span">마치</span></td>
+					<td><input type="checkbox" id="who5" name="who" value="사실"><span class="char_span">사실</span></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="who6" name="who" value="설마"><span class="char_span">설마</span></td>
+					<td><input type="checkbox" id="who7" name="who" value="소니라"><span class="char_span">소니라</span></td>
+					<td><input type="checkbox" id="who8" name="who" value="아마"><span class="char_span">아마</span></td>
+					<td><input type="checkbox" id="who9" name="who" value="저런"><span class="char_span">저런</span></td>
+					<td><input type="checkbox" id="who10" name="who" value="정말"><span class="char_span">정말</span></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" id="who11" name="who" value="페이기"><span class="char_span">페이기</span></td>
+					<td><input type="checkbox" id="who12" name="who" value="하빌라"><span class="char_span">하빌라</span></td>
+					<td><input type="checkbox" id="who13" name="who" value="헤인델"><span class="char_span">헤인델</span></td>
+					<td><input type="checkbox" id="who14" name="who" value="혹시"><span class="char_span">혹시</span></td>
+					<td></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
 <textarea id="result" rows="35" cols="150"></textarea><br>
 </body>
 <script>
-	async function copyText() 
+fetch('../data/pose.txt').then(res => res.text()).then(text => {
+	$('#pose').append('<option>'+text+'</option>');
+  }).catch(err => {  console.error(err); });
+$('#pose').append('<option value="random">랜덤 선택</option>');
+fetch('../data/clothes.txt').then(res => res.text()).then(text => {
+	$('#clothes').append('<option>'+text+'</option>');
+  }).catch(err => {  console.error(err); });
+$('#clothes').append('<option value="random">랜덤 선택</option>');
+fetch('../data/background.txt').then(res => res.text()).then(text => {
+	$('#background').append('<option>'+text+'</option>');
+  }).catch(err => {  console.error(err); });
+$('#background').append('<option value="random">랜덤 선택</option>');
+	
+function getPose()
+{
+	var poseVal = $("#pose option:selected").val();
+	var poseInd = Math.floor(Math.random() * ($("#pose option").length - 1));
+	var poseStr = (poseVal === "random")?$("#pose option").eq(poseInd).text():$("#pose option:selected").text();
+	return poseStr;
+}
+function getClothes()
+{
+	var cloVal = $("#clothes option:selected").val();
+	var cloInd = Math.floor(Math.random() * ($("#clothes option").length - 1));
+	var cloStr = (cloVal === "random")?$("#clothes option").eq(cloInd).text():$("#clothes option:selected").text();
+	return cloStr;
+}
+function getBackground()
+{
+	var bgVal = $("#background option:selected").val();
+	var bgInd = Math.floor(Math.random() * ($("#background option").length - 1));
+	var bgStr = (bgVal === "random")?$("#background option").eq(bgInd).text():$("#background option:selected").text();
+	return bgStr;
+}
+function getMember(memcnt)
+{
+	var memBox = $('input[name="who"]:not(:checked)');
+	if (memBox.length == 0)
+		return;
+	memBox.parent().removeClass("sel_tmp");
+	var indList = [];
+	for(var i=0;i<memcnt;i++)
 	{
-		const text = $("#result").val();
-		try 
-		{
-			await navigator.clipboard.writeText(text);
-		} 
-		catch (err) 
-		{
-			console.error(err);
-		}
+		var memInd = Math.floor(Math.random() * memBox.length);
+		if (!indList.includes(memInd)) 
+			indList.push(memInd);
+		else 
+			i--;
 	}
+	
+	for(var i=0;i<indList.length;i++)
+	{
+		memBox.eq(indList[i]).parent().addClass("sel_tmp");
+	}
+}
+function generateText() 
+{
+	getMember(1);
+	
+	var final_script = [];
+	final_script.push("Use the attached reference image as the character reference.");
+	final_script.push("DEEP CHARACTER ANALYSIS — before drawing anything, analyze the reference image thoroughly and infer: - Visual features: hairstyle, hair length, hair color and highlights, bangs shape, eye shape, eye color, facial impression, skin tone, outfit details, fabric types, accessories, body proportions, signature items Keep the person recognizable, draw them as a charming character high-end semi-realistic Japanese-Korean hybrid illustration style — finished professional artwork with rich textural realism. ");
+	final_script.push("CLOTHES: "+getClothes());
+	final_script.push("POSE: "+getPose());
+	final_script.push("STYLE: high-end semi-realistic anime illustration with strong textural detail, refined character design art blending Japanese light novel illustration depth with Korean webtoon polish (日本ライトノベル × 한국 웹툰 일러스트), top-tier pixiv illustrator quality, 2D hand-painted semi-realistic anime rendering combined with elegant mature anime face proportions, rich painterly shading with smooth gradient blending, detailed light and shadow with proper atmospheric depth, glossy and luminous finish on key surfaces, mature refined anime face proportions on a realistically rendered body, Avoid any 3D game-rendered look, CGI aesthetics, Unreal Engine style, plastic skin, overly sharp game character lighting, or artificial digital-render appearance. The final image should feel like a polished hand-painted semi-realistic illustration, not a video game character render. ");
+	final_script.push("SKIN RENDERING: Soft matte porcelain-like skin painted with smooth 2D gradients, subtle blush, delicate shadow transitions, and gentle hand-painted texture. Avoid waxy skin, plastic skin, hyper-smooth doll skin, realistic subsurface scattering, oily highlights, pore-level realism, and 3D shader-like skin. ");
+	final_script.push("HAIR RENDERING: Hair should be painted as delicate 2D illustration hair with soft layered masses, fine hand-drawn strands, airy edges, and painterly highlights. Avoid 3D particle hair, realistic hair simulation, plastic hair, overly sharp strand rendering, and glossy game-character hair. ");
+	final_script.push("COLOR: color palette based on the reference image, limited to 3–5 main colors, rich painterly rendering with smooth gradient blending and realistic light interaction, glossy finish on key surfaces (eyes, hair, lips, signature item), atmospheric depth with proper shadow weight, cohesive color story across the whole sheet — overall mood of the coloring should match the character's analyzed personality ");
+	final_script.push("ANATOMY CONTROL: anatomically correct body, natural human pose, realistic joint bending, balanced posture, correct limb proportions, natural hand placement, physically plausible pose ");
+	final_script.push("background: "+getBackground());
+	final_script.push("Image size : 3840 × 2160");
+	$("#result").val(final_script.join("\r\n\r\n"));
+}
+async function copyText() 
+{
+	const text = $("#result").val();
+	try	{ await navigator.clipboard.writeText(text); } 
+	catch (err) {console.error(err);}
+	
+	$('.sel_tmp').addClass("sel_com");
+	$('.sel_tmp').find('input[name="who"]').prop('checked', true);
+	$('.sel_tmp').removeClass("sel_tmp");
+}
+function generateMultiText(tp) 
+{
+	var memCnt = $('input[name="mem_radio"]:checked').val();
+	memCnt = (memCnt === undefined)?0:memCnt;
+	if(memCnt==1)
+		memCnt = Math.floor((Math.random() * 2)+2); 	
+	getMember(memCnt);	
+	
+	var final_script = [];
+	final_script.push("Use the attached reference image as the character reference.");
+	final_script.push("DEEP CHARACTER ANALYSIS — before drawing anything, analyze the reference image thoroughly and infer: - Visual features: hairstyle, hair length, hair color and highlights, bangs shape, eye shape, eye color, facial impression, skin tone, outfit details, fabric types, accessories, body proportions, signature items Keep the person recognizable, draw them as a charming character high-end semi-realistic Japanese-Korean hybrid illustration style — finished professional artwork with rich textural realism. ");
+	if(tp==2)
+		{final_script.push("CLOTHES: "+getClothes());}
+	if(tp==3)
+		{final_script.push("POSE: "+getPose());}
+	final_script.push("STYLE: high-end semi-realistic anime illustration with strong textural detail, refined character design art blending Japanese light novel illustration depth with Korean webtoon polish (日本ライトノベル × 한국 웹툰 일러스트), top-tier pixiv illustrator quality, 2D hand-painted semi-realistic anime rendering combined with elegant mature anime face proportions, rich painterly shading with smooth gradient blending, detailed light and shadow with proper atmospheric depth, glossy and luminous finish on key surfaces, mature refined anime face proportions on a realistically rendered body, Avoid any 3D game-rendered look, CGI aesthetics, Unreal Engine style, plastic skin, overly sharp game character lighting, or artificial digital-render appearance. The final image should feel like a polished hand-painted semi-realistic illustration, not a video game character render. ");
+	final_script.push("SKIN RENDERING: Soft matte porcelain-like skin painted with smooth 2D gradients, subtle blush, delicate shadow transitions, and gentle hand-painted texture. Avoid waxy skin, plastic skin, hyper-smooth doll skin, realistic subsurface scattering, oily highlights, pore-level realism, and 3D shader-like skin. ");
+	final_script.push("HAIR RENDERING: Hair should be painted as delicate 2D illustration hair with soft layered masses, fine hand-drawn strands, airy edges, and painterly highlights. Avoid 3D particle hair, realistic hair simulation, plastic hair, overly sharp strand rendering, and glossy game-character hair. ");
+	final_script.push("COLOR: color palette based on the reference image, limited to 3–5 main colors, rich painterly rendering with smooth gradient blending and realistic light interaction, glossy finish on key surfaces (eyes, hair, lips, signature item), atmospheric depth with proper shadow weight, cohesive color story across the whole sheet — overall mood of the coloring should match the character's analyzed personality ");
+	final_script.push("ANATOMY CONTROL: anatomically correct body, natural human pose, realistic joint bending, balanced posture, correct limb proportions, natural hand placement, physically plausible pose ");
+	final_script.push("background: "+getBackground());
+	final_script.push("Image size : 3840 × 2160");
+	
+	var group_script = [];
+	for ( var i=1; i<=memCnt; i++)
+	{
+		group_script.push("================");
+		group_script.push("Character "+ i);
+		group_script.push("================");
+		if(tp==1 || tp==3)
+		{
+			group_script.push("CLOTHES: "+getClothes()+"\r\n");
+		}
+		if(tp==1 || tp==2)
+		{
+			group_script.push("POSE: "+getPose()+"\r\n");
+		}
+		
+	}
+	final_script.push(group_script.join("\r\n"));
+	
+	$("#result").val(final_script.join("\r\n\r\n"));
+}
 </script>
 </html>
