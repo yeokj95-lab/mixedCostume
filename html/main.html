@@ -237,7 +237,8 @@ function generateMultiText(tp)
 }
 function generateRefresh()
 {
-	var gt = $("#generatetype").val(tp);
+	$("#copycheck").val("refresh");
+	var gt = $("#generatetype").val();
 	switch(gt)
 	{
 		case "0": generateText(); break;
