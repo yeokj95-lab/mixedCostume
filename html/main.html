@@ -8,7 +8,7 @@
 <div id="content"></div>
 </body>
 <script>
-fetch('./data/content.txt')
+fetch('../data/content.txt')
   .then(res => res.text())
   .then(text => {
     document.getElementById('content').innerText = text;
