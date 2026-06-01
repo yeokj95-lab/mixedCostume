@@ -9,6 +9,7 @@
 	<title>Dropbox 선택</title>
 </head>
 <body>
+<input type="hidden" id="copycheck" value="init">
 <table>
 	<tr>
 		<th>포즈</th>
@@ -131,6 +132,14 @@ function getBackground()
 }
 function getMember(memcnt)
 {
+	if ($("#copycheck").val() == "copy")
+	{
+		$('.sel_tmp').addClass("sel_com");
+		$('.sel_tmp').find('input[name="who"]').prop('checked', true);
+		$('.sel_tmp').removeClass("sel_tmp");
+		$("#copycheck").val("init");
+	}
+	
 	var memBox = $('input[name="who"]:not(:checked)');
 	if (memBox.length == 0)
 		return;
@@ -174,9 +183,7 @@ async function copyText()
 	try	{ await navigator.clipboard.writeText(text); } 
 	catch (err) {console.error(err);}
 	
-	$('.sel_tmp').addClass("sel_com");
-	$('.sel_tmp').find('input[name="who"]').prop('checked', true);
-	$('.sel_tmp').removeClass("sel_tmp");
+	$("#copycheck").val("copy");
 }
 function generateMultiText(tp) 
 {
@@ -199,6 +206,7 @@ function generateMultiText(tp)
 	final_script.push("COLOR: color palette based on the reference image, limited to 3–5 main colors, rich painterly rendering with smooth gradient blending and realistic light interaction, glossy finish on key surfaces (eyes, hair, lips, signature item), atmospheric depth with proper shadow weight, cohesive color story across the whole sheet — overall mood of the coloring should match the character's analyzed personality ");
 	final_script.push("ANATOMY CONTROL: anatomically correct body, natural human pose, realistic joint bending, balanced posture, correct limb proportions, natural hand placement, physically plausible pose ");
 	final_script.push("background: "+getBackground());
+	final_script.push("IMPORTANT: Draw all characters together in one unified scene with a single continuous background. Do NOT separate them into panels, grids, collage layouts, reference sheets, or individual character showcases. All characters must exist naturally in the same environment, sharing the same perspective, lighting, and atmosphere, interacting like a real group scene.");
 	final_script.push("Image size : 3840 × 2160");
 	
 	var group_script = [];
