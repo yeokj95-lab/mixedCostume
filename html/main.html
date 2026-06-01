@@ -88,25 +88,29 @@
 <script>
 fetch('../data/pose.txt').then(res => res.text()).then(text => {
 	const lines = text.split(/\r?\n/);
+	var ind = 1;
     lines.forEach((line, index) => {
 		if (line.trim() === '') {return;} 
-		else {$('#pose').append('<option>'+line+'</option>');}
+		else {$('#pose').append('<option>'+ind+"-"+line+'</option>');ind++;}
+		
     });
 	$('#pose').append('<option value="random" selected>랜덤 선택</option>');
   }).catch(err => {  console.error(err); });
 fetch('../data/clothes.txt').then(res => res.text()).then(text => {
 	const lines = text.split(/\r?\n/);
+	var ind = 1;
     lines.forEach((line, index) => {
     	if (line.trim() === '') {return;} 
-		else {$('#clothes').append('<option>'+line+'</option>');}
+		else {$('#clothes').append('<option>'+ind+"-"+line+'</option>');ind++;}
     });
 	$('#clothes').append('<option value="random" selected>랜덤 선택</option>');
   }).catch(err => {  console.error(err); });
 fetch('../data/background.txt').then(res => res.text()).then(text => {
 	const lines = text.split(/\r?\n/);
+	var ind = 1;
     lines.forEach((line, index) => {
 		if (line.trim() === '') {return;} 
-		else {$('#background').append('<option>'+line+'</option>');}
+		else {$('#background').append('<option>'+ind+"-"+line+'</option>');ind++}
     });
 	$('#background').append('<option value="random" selected>랜덤 선택</option>');
   }).catch(err => {  console.error(err); });
@@ -116,21 +120,21 @@ function getPose()
 	var poseVal = $("#pose option:selected").val();
 	var poseInd = Math.floor(Math.random() * ($("#pose option").length - 1));
 	var poseStr = (poseVal === "random")?$("#pose option").eq(poseInd).text():$("#pose option:selected").text();
-	return poseStr;
+	return poseStr.split("-")[1];
 }
 function getClothes()
 {
 	var cloVal = $("#clothes option:selected").val();
 	var cloInd = Math.floor(Math.random() * ($("#clothes option").length - 1));
 	var cloStr = (cloVal === "random")?$("#clothes option").eq(cloInd).text():$("#clothes option:selected").text();
-	return cloStr;
+	return cloStr.split("-")[1];
 }
 function getBackground()
 {
 	var bgVal = $("#background option:selected").val();
 	var bgInd = Math.floor(Math.random() * ($("#background option").length - 1));
 	var bgStr = (bgVal === "random")?$("#background option").eq(bgInd).text():$("#background option:selected").text();
-	return bgStr;
+	return bgStr.split("-")[1];
 }
 function getMember(memcnt)
 {
