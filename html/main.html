@@ -84,17 +84,26 @@
 </body>
 <script>
 fetch('../data/pose.txt').then(res => res.text()).then(text => {
-	$('#pose').append('<option>'+text+'</option>');
+	const lines = text.split(/\r?\n/);
+    lines.forEach((line, index) => {
+      $('#pose').append('<option>'+line+'</option>');
+    });
+	$('#pose').append('<option value="random">랜덤 선택</option>');
   }).catch(err => {  console.error(err); });
-$('#pose').append('<option value="random">랜덤 선택</option>');
 fetch('../data/clothes.txt').then(res => res.text()).then(text => {
-	$('#clothes').append('<option>'+text+'</option>');
+	const lines = text.split(/\r?\n/);
+    lines.forEach((line, index) => {
+      $('#clothes').append('<option>'+line+'</option>');
+    });
+	$('#clothes').append('<option value="random">랜덤 선택</option>');
   }).catch(err => {  console.error(err); });
-$('#clothes').append('<option value="random">랜덤 선택</option>');
 fetch('../data/background.txt').then(res => res.text()).then(text => {
-	$('#background').append('<option>'+text+'</option>');
+	const lines = text.split(/\r?\n/);
+    lines.forEach((line, index) => {
+      $('#background').append('<option>'+line+'</option>');
+    });
+	$('#background').append('<option value="random">랜덤 선택</option>');
   }).catch(err => {  console.error(err); });
-$('#background').append('<option value="random">랜덤 선택</option>');
 	
 function getPose()
 {
