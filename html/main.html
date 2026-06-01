@@ -9,13 +9,21 @@
 	<title>Dropbox 선택</title>
 </head>
 <body>
-<div id="content"></div>
+	<button onclick="copyText()">복사</button>
+<textarea id="result" rows="35" cols="150"></textarea><br>
 </body>
 <script>
-fetch('../data/pose.txt')
-  .then(res => res.text())
-  .then(text => {
-    document.getElementById('content').innerText = text;
-  });
+	async function copyText() 
+	{
+		const text = $("#result").val();
+		try 
+		{
+			await navigator.clipboard.writeText(text);
+		} 
+		catch (err) 
+		{
+			console.error(err);
+		}
+	}
 </script>
 </html>
