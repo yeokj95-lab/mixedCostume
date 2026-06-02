@@ -147,8 +147,11 @@ function getMember(memcnt)
 	}
 	
 	var memBox = $('input[name="who"]:not(:checked)');
-	if (memBox.length == 0)
+	if (memBox.length == 0 || memcnt > memBox.length)
+	{
+		alert("No Member");
 		return;
+	}
 	memBox.parent().removeClass("sel_tmp");
 	var indList = [];
 	for(var i=0;i<memcnt;i++)
