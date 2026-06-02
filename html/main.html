@@ -11,6 +11,7 @@
 <body>
 <input type="hidden" id="copycheck" value="init">
 <input type="hidden" id="generatetype" value="0">
+<div id="toast"></div>
 <table>
 	<tr>
 		<th>포즈</th>
@@ -114,7 +115,11 @@ fetch('../data/background.txt').then(res => res.text()).then(text => {
     });
 	$('#background').append('<option value="random" selected>랜덤 선택</option>');
   }).catch(err => {  console.error(err); });
-	
+
+function showToast(message) {
+    $('#toast').text(message).addClass('show');
+    setTimeout(function () { $('#toast').removeClass('show'); }, 2000);
+}
 function getPose()
 {
 	var poseVal = $("#pose option:selected").val();
@@ -149,7 +154,7 @@ function getMember(memcnt)
 	var memBox = $('input[name="who"]:not(:checked)');
 	if (memBox.length == 0 || memcnt > memBox.length)
 	{
-		alert("No Member");
+		showToast("No Member");
 		return;
 	}
 	memBox.parent().removeClass("sel_tmp");
@@ -194,6 +199,7 @@ async function copyText()
 	catch (err) {console.error(err);}
 	
 	$("#copycheck").val("copy");
+	showToast("Copied");
 }
 function generateMultiText(tp) 
 {
