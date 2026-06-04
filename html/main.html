@@ -32,14 +32,6 @@
 	<tr><td colspan=3><hr></td></tr>
 	<tr>
 		<td colspan=3 align="center">
-			<button onclick="generateText()">생성</button>
-			<button onclick="copyText()">복사</button>
-			<button onclick="generateRefresh()">갱신</button>
-		</td>
-	</tr>
-	<tr><td colspan=3><hr></td></tr>
-	<tr>
-		<td colspan=3 align="center">
 			<label for="mem1"><input type="radio" id="mem1" name="mem_radio" value="1"><span> 2~3인</span></label>
 			<label for="mem2"><input type="radio" id="mem2" name="mem_radio" value="2" checked><span> 2인</span></label>
 			<label for="mem3"><input type="radio" id="mem3" name="mem_radio" value="3"><span> 3인</span></label>
@@ -49,10 +41,39 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan=3 align="center">
-			<button onclick="generateMultiText(1)">포즈, 의상 무작위</button>
-			<button onclick="generateMultiText(2)">포즈 무작위</button>
-			<button onclick="generateMultiText(3)">의상 무작위</button>
+		<td>컨셉 - 싱글</td>
+		<td colspan=2 align="center">
+			<button class="but_theme1" onclick="generateText()">생성</button>
+			<button class="but_theme1" onclick="copyText()">복사</button>
+			<button class="but_theme1" onclick="generateRefresh()">갱신</button>
+		</td>
+	</tr>
+	<tr><td colspan=3><hr></td></tr>
+	
+	<tr>
+		<td>컨셉 - 단체</td>
+		<td colspan=2 align="center">
+			<button class="but_theme1" onclick="generateMultiText(1)">포즈, 의상 무작위</button>
+			<button class="but_theme1" onclick="generateMultiText(2)">포즈 무작위</button>
+			<button class="but_theme1" onclick="generateMultiText(3)">의상 무작위</button>
+		</td>
+	</tr>
+	<tr><td colspan=3><hr></td></tr>
+	<tr>
+		<td>피규어 - 싱글</td>
+		<td colspan=2 align="center">
+			<button class="but_theme2" onclick="generateText()">생성</button>
+			<button class="but_theme2" onclick="copyText()">복사</button>
+			<button class="but_theme2" onclick="generateRefresh()">갱신</button>
+		</td>
+	</tr>
+	<tr><td colspan=3><hr></td></tr>
+	<tr>
+		<td>피규어 - 단체</td>
+		<td colspan=2 align="center">
+			<button class="but_theme2" onclick="generateMultiText(1)">포즈, 의상 무작위</button>
+			<button class="but_theme2" onclick="generateMultiText(2)">포즈 무작위</button>
+			<button class="but_theme2" onclick="generateMultiText(3)">의상 무작위</button>
 		</td>
 	</tr>
 	<tr><td colspan=3><hr></td></tr>
