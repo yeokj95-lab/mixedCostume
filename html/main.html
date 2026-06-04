@@ -131,12 +131,28 @@ function showToast(message) {
     $('#toast').text(message).addClass('show');
     setTimeout(function () { $('#toast').removeClass('show'); }, 2000);
 }
-function getPose()
+function getPose(scr_type)
 {
 	var poseVal = $("#pose option:selected").val();
 	var poseInd = Math.floor(Math.random() * ($("#pose option").length - 1));
 	var poseStr = (poseVal === "random")?$("#pose option").eq(poseInd).text():$("#pose option:selected").text();
-	return poseStr.split(" -> ")[1];
+	poseStr = poseStr.split(" -> ")[1]
+	if(scr_type=="f")
+	{
+		var split_pose = poseStr.split(",");
+		var tmp_pose = [];
+		for( var i=0;i<split_pose.length;i++)
+		{
+			if(split_pose[i].indexOf("구도") >= 0 || split_pose[i].indexOf("로우앵글") >= 0 || split_pose[i].indexOf("로우 앵글") >= 0
+					 || split_pose[i].indexOf("하이앵글") >= 0 || split_pose[i].indexOf("하이 앵글") >= 0)
+				continue;
+			else
+				tmp_pose.push(split_pose[i]);
+		}
+		poseStr = tmp_pose.join(", ");
+	}
+	
+	return poseStr;
 }
 function getClothes()
 {
@@ -195,7 +211,7 @@ function generateText(scr_type)
 		final_script.push("Use the attached reference image as the character reference.");
 		final_script.push("DEEP CHARACTER ANALYSIS — before drawing anything, analyze the reference image thoroughly and infer: - Visual features: hairstyle, hair length, hair color and highlights, bangs shape, eye shape, eye color, facial impression, skin tone, outfit details, fabric types, accessories, body proportions, signature items Keep the person recognizable, draw them as a charming character high-end semi-realistic Japanese-Korean hybrid illustration style — finished professional artwork with rich textural realism. ");
 		final_script.push("CLOTHES: "+getClothes());
-		final_script.push("POSE: "+getPose());
+		final_script.push("POSE: "+getPose(scr_type));
 		final_script.push("STYLE: high-end semi-realistic anime illustration with strong textural detail, refined character design art blending Japanese light novel illustration depth with Korean webtoon polish (日本ライトノベル × 한국 웹툰 일러스트), top-tier pixiv illustrator quality, 2D hand-painted semi-realistic anime rendering combined with elegant mature anime face proportions, rich painterly shading with smooth gradient blending, detailed light and shadow with proper atmospheric depth, glossy and luminous finish on key surfaces, mature refined anime face proportions on a realistically rendered body, Avoid any 3D game-rendered look, CGI aesthetics, Unreal Engine style, plastic skin, overly sharp game character lighting, or artificial digital-render appearance. The final image should feel like a polished hand-painted semi-realistic illustration, not a video game character render. ");
 		final_script.push("SKIN RENDERING: Soft matte porcelain-like skin painted with smooth 2D gradients, subtle blush, delicate shadow transitions, and gentle hand-painted texture. Avoid waxy skin, plastic skin, hyper-smooth doll skin, realistic subsurface scattering, oily highlights, pore-level realism, and 3D shader-like skin. ");
 		final_script.push("HAIR RENDERING: Hair should be painted as delicate 2D illustration hair with soft layered masses, fine hand-drawn strands, airy edges, and painterly highlights. Avoid 3D particle hair, realistic hair simulation, plastic hair, overly sharp strand rendering, and glossy game-character hair. ");
@@ -213,7 +229,7 @@ function generateText(scr_type)
 		final_script.push("Make it look like a real expensive pre-painted physical collectible figure, not a flat illustration, not a live human cosplay photo, and not a raw game-model screenshot.\r\nEmphasize strong 3D volume, clean sculpted hair strands, refined face paint, crisp clothing folds, premium PVC texture, subtle paint gradients, and realistic material separation.");
 		final_script.push("Place the figure on a simple round display base on a computer desk, with a blurred keyboard and soft monitor glow in the background.\r\nUse professional studio product photography with clean premium studio lighting, soft diffused key light, subtle rim light, realistic shadows, shallow depth of field, and sharp focus on the figure as a physical collectible.");
 		final_script.push("CLOTHES: "+getClothes());
-		final_script.push("POSE: "+getPose());
+		final_script.push("POSE: "+getPose(scr_type));
 		final_script.push("Facial expression: gentle natural smile, subtle cheerful expression, relaxed happy mood");
 	}
 	$("#result").val(final_script.join("\r\n\r\n"));
@@ -244,7 +260,7 @@ function generateMultiText(scr_type, tp)
 		if(tp==2)
 			{final_script.push("CLOTHES: "+getClothes());}
 		if(tp==3)
-			{final_script.push("POSE: "+getPose());}
+			{final_script.push("POSE: "+getPose(scr_type));}
 		final_script.push("STYLE: high-end semi-realistic anime illustration with strong textural detail, refined character design art blending Japanese light novel illustration depth with Korean webtoon polish (日本ライトノベル × 한국 웹툰 일러스트), top-tier pixiv illustrator quality, 2D hand-painted semi-realistic anime rendering combined with elegant mature anime face proportions, rich painterly shading with smooth gradient blending, detailed light and shadow with proper atmospheric depth, glossy and luminous finish on key surfaces, mature refined anime face proportions on a realistically rendered body, Avoid any 3D game-rendered look, CGI aesthetics, Unreal Engine style, plastic skin, overly sharp game character lighting, or artificial digital-render appearance. The final image should feel like a polished hand-painted semi-realistic illustration, not a video game character render. ");
 		final_script.push("SKIN RENDERING: Soft matte porcelain-like skin painted with smooth 2D gradients, subtle blush, delicate shadow transitions, and gentle hand-painted texture. Avoid waxy skin, plastic skin, hyper-smooth doll skin, realistic subsurface scattering, oily highlights, pore-level realism, and 3D shader-like skin. ");
 		final_script.push("HAIR RENDERING: Hair should be painted as delicate 2D illustration hair with soft layered masses, fine hand-drawn strands, airy edges, and painterly highlights. Avoid 3D particle hair, realistic hair simulation, plastic hair, overly sharp strand rendering, and glossy game-character hair. ");
@@ -266,7 +282,7 @@ function generateMultiText(scr_type, tp)
 		if(tp==2)
 			{final_script.push("CLOTHES: "+getClothes());}
 		if(tp==3)
-			{final_script.push("POSE: "+getPose());}
+			{final_script.push("POSE: "+getPose(scr_type));}
 		final_script.push("Facial expression: gentle natural smile, subtle cheerful expression, relaxed happy mood");
 		final_script.push("IMPORTANT: Draw all characters together in one unified scene with a single continuous background. Do NOT separate them into panels, grids, collage layouts, reference sheets, or individual character showcases. All characters must exist naturally in the same environment, sharing the same perspective, lighting, and atmosphere, interacting like a real group scene.");
 		final_script.push("GROUP HARMONY: all characters must feel like they belong to the same world, same series, and same illustration set, unified artistic direction and visual language across every character, consistent rendering quality, line weight, anatomy proportions, facial structure style, eye rendering style, lighting logic, and shading technique, harmonized color balance and shared atmospheric lighting, coordinated saturation and contrast across the ensemble, natural interaction and chemistry between characters, balanced spacing and overlapping silhouettes for visual cohesion, complementary poses that flow together compositionally instead of isolated standalone poses, subtle shared design motifs and repeating shape language, cohesive emotional tone and synchronized mood, ensemble composition with cinematic group balance, no character visually overpowering the others unless intentionally designated as the focal point, every character maintaining individuality while still blending seamlessly into a unified cast illustration ");
@@ -284,7 +300,7 @@ function generateMultiText(scr_type, tp)
 		}
 		if(tp==1 || tp==2)
 		{
-			group_script.push("POSE: "+getPose()+"\r\n");
+			group_script.push("POSE: "+getPose(scr_type)+"\r\n");
 		}
 		
 	}
