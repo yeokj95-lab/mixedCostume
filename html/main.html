@@ -143,8 +143,9 @@ function getPose(scr_type)
 		var tmp_pose = [];
 		for( var i=0;i<split_pose.length;i++)
 		{
-			if(split_pose[i].indexOf("구도") >= 0 || split_pose[i].indexOf("로우앵글") >= 0 || split_pose[i].indexOf("로우 앵글") >= 0
-					 || split_pose[i].indexOf("하이앵글") >= 0 || split_pose[i].indexOf("하이 앵글") >= 0)
+			if(split_pose[i].indexOf("구도") >= 0 || split_pose[i].indexOf("로우앵글") >= 0 || split_pose[i].indexOf("로우 앵글") >= 0 
+					|| split_pose[i].indexOf("하이앵글") >= 0 || split_pose[i].indexOf("하이 앵글") >= 0 
+			  		|| split_pose[i].indexOf("프레이밍") >= 0 )
 				continue;
 			else
 				tmp_pose.push(split_pose[i]);
