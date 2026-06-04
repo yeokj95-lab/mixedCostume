@@ -17,7 +17,7 @@
 		<th>포즈</th>
 		<td><select id="pose" style="width:400px;">
 		</select></td>
-		<td rowspan=3><button onclick="window.location.reload()">초기화</button></td>
+		<td rowspan=3><button class="but_theme0" onclick="window.location.reload()">초기화</button></td>
 	</tr>
 	<tr>
 		<th>의상</th>
@@ -29,10 +29,9 @@
 		<td><select id="background" style="width:400px;">
 		</select></td>
 	</tr>
-	<tr><td colspan=3><hr></td></tr>
 	<tr>
-		<td colspan=3 align="center">
-			<label for="mem1"><input type="radio" id="mem1" name="mem_radio" value="1"><span> 2~3인</span></label>
+		<th>인원</th>
+		<td>
 			<label for="mem2"><input type="radio" id="mem2" name="mem_radio" value="2" checked><span> 2인</span></label>
 			<label for="mem3"><input type="radio" id="mem3" name="mem_radio" value="3"><span> 3인</span></label>
 			<label for="mem4"><input type="radio" id="mem4" name="mem_radio" value="4"><span> 4인</span></label>
@@ -41,39 +40,33 @@
 		</td>
 	</tr>
 	<tr>
-		<td>컨셉 - 싱글</td>
-		<td colspan=2 align="center">
-			<button class="but_theme1" onclick="generateText()">생성</button>
-			<button class="but_theme1" onclick="copyText()">복사</button>
-			<button class="but_theme1" onclick="generateRefresh()">갱신</button>
+		<td colspan=3 align="center">
+			<button class="but_theme0" onclick="copyText()">복사</button>
+			<button class="but_theme0" onclick="generateRefresh()">갱신</button>
 		</td>
 	</tr>
 	<tr><td colspan=3><hr></td></tr>
-	
+	<tr><td colspan=3 class="subtitle">컨셉</td></tr>
 	<tr>
-		<td>컨셉 - 단체</td>
+		<td align="center">
+			<button class="but_theme1" onclick="generateText('c')">싱글</button>
+		</td>
 		<td colspan=2 align="center">
-			<button class="but_theme1" onclick="generateMultiText(1)">포즈, 의상 무작위</button>
-			<button class="but_theme1" onclick="generateMultiText(2)">포즈 무작위</button>
-			<button class="but_theme1" onclick="generateMultiText(3)">의상 무작위</button>
+			<button class="but_theme1" onclick="generateMultiText('c',1)">포즈, 의상 무작위</button>
+			<button class="but_theme1" onclick="generateMultiText('c',2)">포즈 무작위</button>
+			<button class="but_theme1" onclick="generateMultiText('c',3)">의상 무작위</button>
 		</td>
 	</tr>
 	<tr><td colspan=3><hr></td></tr>
+	<tr><td colspan=3 class="subtitle">피규어</td></tr>
 	<tr>
-		<td>피규어 - 싱글</td>
-		<td colspan=2 align="center">
-			<button class="but_theme2" onclick="generateText()">생성</button>
-			<button class="but_theme2" onclick="copyText()">복사</button>
-			<button class="but_theme2" onclick="generateRefresh()">갱신</button>
+		<td align="center">
+			<button class="but_theme2" onclick="generateText('f')">싱글</button>
 		</td>
-	</tr>
-	<tr><td colspan=3><hr></td></tr>
-	<tr>
-		<td>피규어 - 단체</td>
 		<td colspan=2 align="center">
-			<button class="but_theme2" onclick="generateMultiText(1)">포즈, 의상 무작위</button>
-			<button class="but_theme2" onclick="generateMultiText(2)">포즈 무작위</button>
-			<button class="but_theme2" onclick="generateMultiText(3)">의상 무작위</button>
+			<button class="but_theme2" onclick="generateMultiText('f',1)">포즈, 의상 무작위</button>
+			<button class="but_theme2" onclick="generateMultiText('f',2)">포즈 무작위</button>
+			<button class="but_theme2" onclick="generateMultiText('f',3)">의상 무작위</button>
 		</td>
 	</tr>
 	<tr><td colspan=3><hr></td></tr>
@@ -86,20 +79,17 @@
 					<td><input type="checkbox" id="who3" name="who" value="리얼"><span class="char_span">리얼</span></td>
 					<td><input type="checkbox" id="who4" name="who" value="마치"><span class="char_span">마치</span></td>
 					<td><input type="checkbox" id="who5" name="who" value="사실"><span class="char_span">사실</span></td>
-				</tr>
-				<tr>
 					<td><input type="checkbox" id="who6" name="who" value="설마"><span class="char_span">설마</span></td>
 					<td><input type="checkbox" id="who7" name="who" value="소니라"><span class="char_span">소니라</span></td>
+				</tr>
+				<tr>
 					<td><input type="checkbox" id="who8" name="who" value="아마"><span class="char_span">아마</span></td>
 					<td><input type="checkbox" id="who9" name="who" value="저런"><span class="char_span">저런</span></td>
 					<td><input type="checkbox" id="who10" name="who" value="정말"><span class="char_span">정말</span></td>
-				</tr>
-				<tr>
 					<td><input type="checkbox" id="who11" name="who" value="페이기"><span class="char_span">페이기</span></td>
 					<td><input type="checkbox" id="who12" name="who" value="하빌라"><span class="char_span">하빌라</span></td>
 					<td><input type="checkbox" id="who13" name="who" value="헤인델"><span class="char_span">헤인델</span></td>
 					<td><input type="checkbox" id="who14" name="who" value="혹시"><span class="char_span">혹시</span></td>
-					<td></td>
 				</tr>
 			</table>
 		</td>
@@ -194,23 +184,38 @@ function getMember(memcnt)
 		memBox.eq(indList[i]).parent().addClass("sel_tmp");
 	}
 }
-function generateText() 
+function generateText(scr_type) 
 {
-	$("#generatetype").val("0");
+	$("#generatetype").val(scr_type+"0");
 	getMember(1);
 	
 	var final_script = [];
-	final_script.push("Use the attached reference image as the character reference.");
-	final_script.push("DEEP CHARACTER ANALYSIS — before drawing anything, analyze the reference image thoroughly and infer: - Visual features: hairstyle, hair length, hair color and highlights, bangs shape, eye shape, eye color, facial impression, skin tone, outfit details, fabric types, accessories, body proportions, signature items Keep the person recognizable, draw them as a charming character high-end semi-realistic Japanese-Korean hybrid illustration style — finished professional artwork with rich textural realism. ");
-	final_script.push("CLOTHES: "+getClothes());
-	final_script.push("POSE: "+getPose());
-	final_script.push("STYLE: high-end semi-realistic anime illustration with strong textural detail, refined character design art blending Japanese light novel illustration depth with Korean webtoon polish (日本ライトノベル × 한국 웹툰 일러스트), top-tier pixiv illustrator quality, 2D hand-painted semi-realistic anime rendering combined with elegant mature anime face proportions, rich painterly shading with smooth gradient blending, detailed light and shadow with proper atmospheric depth, glossy and luminous finish on key surfaces, mature refined anime face proportions on a realistically rendered body, Avoid any 3D game-rendered look, CGI aesthetics, Unreal Engine style, plastic skin, overly sharp game character lighting, or artificial digital-render appearance. The final image should feel like a polished hand-painted semi-realistic illustration, not a video game character render. ");
-	final_script.push("SKIN RENDERING: Soft matte porcelain-like skin painted with smooth 2D gradients, subtle blush, delicate shadow transitions, and gentle hand-painted texture. Avoid waxy skin, plastic skin, hyper-smooth doll skin, realistic subsurface scattering, oily highlights, pore-level realism, and 3D shader-like skin. ");
-	final_script.push("HAIR RENDERING: Hair should be painted as delicate 2D illustration hair with soft layered masses, fine hand-drawn strands, airy edges, and painterly highlights. Avoid 3D particle hair, realistic hair simulation, plastic hair, overly sharp strand rendering, and glossy game-character hair. ");
-	final_script.push("COLOR: color palette based on the reference image, limited to 3–5 main colors, rich painterly rendering with smooth gradient blending and realistic light interaction, glossy finish on key surfaces (eyes, hair, lips, signature item), atmospheric depth with proper shadow weight, cohesive color story across the whole sheet — overall mood of the coloring should match the character's analyzed personality ");
-	final_script.push("ANATOMY CONTROL: anatomically correct body, natural human pose, realistic joint bending, balanced posture, correct limb proportions, natural hand placement, physically plausible pose ");
-	final_script.push("background: "+getBackground());
-	final_script.push("Image size : 3840 × 2160");
+	if(scr_type=="c")
+	{
+		final_script.push("Use the attached reference image as the character reference.");
+		final_script.push("DEEP CHARACTER ANALYSIS — before drawing anything, analyze the reference image thoroughly and infer: - Visual features: hairstyle, hair length, hair color and highlights, bangs shape, eye shape, eye color, facial impression, skin tone, outfit details, fabric types, accessories, body proportions, signature items Keep the person recognizable, draw them as a charming character high-end semi-realistic Japanese-Korean hybrid illustration style — finished professional artwork with rich textural realism. ");
+		final_script.push("CLOTHES: "+getClothes());
+		final_script.push("POSE: "+getPose());
+		final_script.push("STYLE: high-end semi-realistic anime illustration with strong textural detail, refined character design art blending Japanese light novel illustration depth with Korean webtoon polish (日本ライトノベル × 한국 웹툰 일러스트), top-tier pixiv illustrator quality, 2D hand-painted semi-realistic anime rendering combined with elegant mature anime face proportions, rich painterly shading with smooth gradient blending, detailed light and shadow with proper atmospheric depth, glossy and luminous finish on key surfaces, mature refined anime face proportions on a realistically rendered body, Avoid any 3D game-rendered look, CGI aesthetics, Unreal Engine style, plastic skin, overly sharp game character lighting, or artificial digital-render appearance. The final image should feel like a polished hand-painted semi-realistic illustration, not a video game character render. ");
+		final_script.push("SKIN RENDERING: Soft matte porcelain-like skin painted with smooth 2D gradients, subtle blush, delicate shadow transitions, and gentle hand-painted texture. Avoid waxy skin, plastic skin, hyper-smooth doll skin, realistic subsurface scattering, oily highlights, pore-level realism, and 3D shader-like skin. ");
+		final_script.push("HAIR RENDERING: Hair should be painted as delicate 2D illustration hair with soft layered masses, fine hand-drawn strands, airy edges, and painterly highlights. Avoid 3D particle hair, realistic hair simulation, plastic hair, overly sharp strand rendering, and glossy game-character hair. ");
+		final_script.push("COLOR: color palette based on the reference image, limited to 3–5 main colors, rich painterly rendering with smooth gradient blending and realistic light interaction, glossy finish on key surfaces (eyes, hair, lips, signature item), atmospheric depth with proper shadow weight, cohesive color story across the whole sheet — overall mood of the coloring should match the character's analyzed personality ");
+		final_script.push("ANATOMY CONTROL: anatomically correct body, natural human pose, realistic joint bending, balanced posture, correct limb proportions, natural hand placement, physically plausible pose ");
+		final_script.push("background: "+getBackground());
+		final_script.push("Image size : 3840 × 2160");
+	}
+	else if (scr_type=="f")
+	{
+		final_script.push("고퀄리티 피규어를 만들어줘.");
+		final_script.push("Transform the uploaded reference image(s) into a premium high-end Japanese anime PVC scale figure.");
+		final_script.push("Treat all uploaded images as character references.\r\nIf multiple images are provided, use them together as a multi-angle model sheet and preserve the same character consistently across all visible details.\r\nIf only one image is provided, infer missing unseen details conservatively so they remain fully consistent with the visible design.");
+		final_script.push("Preserve the same character identity, face impression, hairstyle, hair color, body proportions, outfit structure, outfit colors, accessories, socks, shoes, and overall silhouette.");
+		final_script.push("Make it look like a real expensive pre-painted physical collectible figure, not a flat illustration, not a live human cosplay photo, and not a raw game-model screenshot.\r\nEmphasize strong 3D volume, clean sculpted hair strands, refined face paint, crisp clothing folds, premium PVC texture, subtle paint gradients, and realistic material separation.");
+		final_script.push("Place the figure on a simple round display base on a computer desk, with a blurred keyboard and soft monitor glow in the background.\r\nUse professional studio product photography with clean premium studio lighting, soft diffused key light, subtle rim light, realistic shadows, shallow depth of field, and sharp focus on the figure as a physical collectible.");
+		final_script.push("CLOTHES: "+getClothes());
+		final_script.push("POSE: "+getPose());
+		final_script.push("Facial expression: gentle natural smile, subtle cheerful expression, relaxed happy mood");
+	}
 	$("#result").val(final_script.join("\r\n\r\n"));
 }
 async function copyText() 
@@ -222,9 +227,9 @@ async function copyText()
 	$("#copycheck").val("copy");
 	showToast("Copied");
 }
-function generateMultiText(tp) 
+function generateMultiText(scr_type, tp) 
 {
-	$("#generatetype").val(tp);
+	$("#generatetype").val(scr_type+tp);
 	var memCnt = $('input[name="mem_radio"]:checked').val();
 	memCnt = (memCnt === undefined)?0:memCnt;
 	if(memCnt==1)
@@ -232,22 +237,36 @@ function generateMultiText(tp)
 	getMember(memCnt);	
 	
 	var final_script = [];
-	final_script.push("Use the attached reference image as the character reference.");
-	final_script.push("DEEP CHARACTER ANALYSIS — before drawing anything, analyze the reference image thoroughly and infer: - Visual features: hairstyle, hair length, hair color and highlights, bangs shape, eye shape, eye color, facial impression, skin tone, outfit details, fabric types, accessories, body proportions, signature items Keep the person recognizable, draw them as a charming character high-end semi-realistic Japanese-Korean hybrid illustration style — finished professional artwork with rich textural realism. ");
-	if(tp==2)
-		{final_script.push("CLOTHES: "+getClothes());}
-	if(tp==3)
-		{final_script.push("POSE: "+getPose());}
-	final_script.push("STYLE: high-end semi-realistic anime illustration with strong textural detail, refined character design art blending Japanese light novel illustration depth with Korean webtoon polish (日本ライトノベル × 한국 웹툰 일러스트), top-tier pixiv illustrator quality, 2D hand-painted semi-realistic anime rendering combined with elegant mature anime face proportions, rich painterly shading with smooth gradient blending, detailed light and shadow with proper atmospheric depth, glossy and luminous finish on key surfaces, mature refined anime face proportions on a realistically rendered body, Avoid any 3D game-rendered look, CGI aesthetics, Unreal Engine style, plastic skin, overly sharp game character lighting, or artificial digital-render appearance. The final image should feel like a polished hand-painted semi-realistic illustration, not a video game character render. ");
-	final_script.push("SKIN RENDERING: Soft matte porcelain-like skin painted with smooth 2D gradients, subtle blush, delicate shadow transitions, and gentle hand-painted texture. Avoid waxy skin, plastic skin, hyper-smooth doll skin, realistic subsurface scattering, oily highlights, pore-level realism, and 3D shader-like skin. ");
-	final_script.push("HAIR RENDERING: Hair should be painted as delicate 2D illustration hair with soft layered masses, fine hand-drawn strands, airy edges, and painterly highlights. Avoid 3D particle hair, realistic hair simulation, plastic hair, overly sharp strand rendering, and glossy game-character hair. ");
-	//final_script.push("COLOR: color palette based on the reference image, limited to 3–5 main colors, rich painterly rendering with smooth gradient blending and realistic light interaction, glossy finish on key surfaces (eyes, hair, lips, signature item), atmospheric depth with proper shadow weight, cohesive color story across the whole sheet — overall mood of the coloring should match the character's analyzed personality ");
-	final_script.push("COLOR: unified semi-realistic anime illustration palette inspired by the reference image, each character assigned a distinct but harmonized sub-palette within the same tonal family, using 3–5 dominant colors per character while maintaining an overall cohesive color story across the full composition, soft hue variation between characters for clear visual identity without breaking harmony, rich painterly rendering with smooth gradient blending and realistic light interaction, glossy finish on key surfaces such as eyes, hair, lips, and signature accessories, atmospheric depth with balanced shadow weight and subtle ambient lighting, carefully coordinated saturation and temperature contrast to preserve group consistency, overall coloring mood reflecting each character’s analyzed personality while remaining visually unified as a complete ensemble sheet ");
-	final_script.push("ANATOMY CONTROL: anatomically correct body, natural human pose, realistic joint bending, balanced posture, correct limb proportions, natural hand placement, physically plausible pose ");
-	final_script.push("background: "+getBackground());
-	final_script.push("IMPORTANT: Draw all characters together in one unified scene with a single continuous background. Do NOT separate them into panels, grids, collage layouts, reference sheets, or individual character showcases. All characters must exist naturally in the same environment, sharing the same perspective, lighting, and atmosphere, interacting like a real group scene.");
-	final_script.push("GROUP HARMONY: all characters must feel like part of the same world and illustration set, with unified art direction, consistent anatomy, facial style, eye rendering, lighting, shading, line weight, and rendering quality, harmonized colors and atmospheric lighting, natural chemistry and interaction, cohesive emotional tone, balanced cinematic ensemble composition, characters positioned close together with overlapping silhouettes and tight spacing, grouped near the center of the frame, complementary poses that flow naturally as one composition, maintaining individuality while blending seamlessly into a unified cast illustration ");
-	final_script.push("Image size : 3840 × 2160");
+	if(scr_type=="c")
+	{
+		final_script.push("Use the attached reference image as the character reference.");
+		final_script.push("DEEP CHARACTER ANALYSIS — before drawing anything, analyze the reference image thoroughly and infer: - Visual features: hairstyle, hair length, hair color and highlights, bangs shape, eye shape, eye color, facial impression, skin tone, outfit details, fabric types, accessories, body proportions, signature items Keep the person recognizable, draw them as a charming character high-end semi-realistic Japanese-Korean hybrid illustration style — finished professional artwork with rich textural realism. ");
+		if(tp==2)
+			{final_script.push("CLOTHES: "+getClothes());}
+		if(tp==3)
+			{final_script.push("POSE: "+getPose());}
+		final_script.push("STYLE: high-end semi-realistic anime illustration with strong textural detail, refined character design art blending Japanese light novel illustration depth with Korean webtoon polish (日本ライトノベル × 한국 웹툰 일러스트), top-tier pixiv illustrator quality, 2D hand-painted semi-realistic anime rendering combined with elegant mature anime face proportions, rich painterly shading with smooth gradient blending, detailed light and shadow with proper atmospheric depth, glossy and luminous finish on key surfaces, mature refined anime face proportions on a realistically rendered body, Avoid any 3D game-rendered look, CGI aesthetics, Unreal Engine style, plastic skin, overly sharp game character lighting, or artificial digital-render appearance. The final image should feel like a polished hand-painted semi-realistic illustration, not a video game character render. ");
+		final_script.push("SKIN RENDERING: Soft matte porcelain-like skin painted with smooth 2D gradients, subtle blush, delicate shadow transitions, and gentle hand-painted texture. Avoid waxy skin, plastic skin, hyper-smooth doll skin, realistic subsurface scattering, oily highlights, pore-level realism, and 3D shader-like skin. ");
+		final_script.push("HAIR RENDERING: Hair should be painted as delicate 2D illustration hair with soft layered masses, fine hand-drawn strands, airy edges, and painterly highlights. Avoid 3D particle hair, realistic hair simulation, plastic hair, overly sharp strand rendering, and glossy game-character hair. ");
+		final_script.push("COLOR: color palette based on the reference image, limited to 3–5 main colors, rich painterly rendering with smooth gradient blending and realistic light interaction, glossy finish on key surfaces (eyes, hair, lips, signature item), atmospheric depth with proper shadow weight, cohesive color story across the whole sheet — overall mood of the coloring should match the character's analyzed personality ");
+		final_script.push("ANATOMY CONTROL: anatomically correct body, natural human pose, realistic joint bending, balanced posture, correct limb proportions, natural hand placement, physically plausible pose ");
+		final_script.push("background: "+getBackground());
+		final_script.push("Image size : 3840 × 2160");
+	}
+	else if (scr_type=="f")
+	{
+		final_script.push("고퀄리티 피규어를 만들어줘.");
+		final_script.push("Transform the uploaded reference image(s) into a premium high-end Japanese anime PVC scale figure.");
+		final_script.push("Treat all uploaded images as character references.\r\nIf multiple images are provided, use them together as a multi-angle model sheet and preserve the same character consistently across all visible details.\r\nIf only one image is provided, infer missing unseen details conservatively so they remain fully consistent with the visible design.");
+		final_script.push("Preserve the same character identity, face impression, hairstyle, hair color, body proportions, outfit structure, outfit colors, accessories, socks, shoes, and overall silhouette.");
+		final_script.push("Make it look like a real expensive pre-painted physical collectible figure, not a flat illustration, not a live human cosplay photo, and not a raw game-model screenshot.\r\nEmphasize strong 3D volume, clean sculpted hair strands, refined face paint, crisp clothing folds, premium PVC texture, subtle paint gradients, and realistic material separation.");
+		final_script.push("Place the figure on a simple round display base on a computer desk, with a blurred keyboard and soft monitor glow in the background.\r\nUse professional studio product photography with clean premium studio lighting, soft diffused key light, subtle rim light, realistic shadows, shallow depth of field, and sharp focus on the figure as a physical collectible.");
+		if(tp==2)
+			{final_script.push("CLOTHES: "+getClothes());}
+		if(tp==3)
+			{final_script.push("POSE: "+getPose());}
+		final_script.push("Facial expression: gentle natural smile, subtle cheerful expression, relaxed happy mood");
+	}
 	
 	var group_script = [];
 	for ( var i=1; i<=memCnt; i++)
@@ -275,10 +294,14 @@ function generateRefresh()
 	var gt = $("#generatetype").val();
 	switch(gt)
 	{
-		case "0": generateText(); break;
-		case "1": generateMultiText(1); break;
-		case "2": generateMultiText(2); break;
-		case "3": generateMultiText(3); break;
+		case "c0": generateText("c"); break;
+		case "c1": generateMultiText("c",1); break;
+		case "c2": generateMultiText("c",2); break;
+		case "c3": generateMultiText("c",3); break;
+		case "f0": generateText("f"); break;
+		case "f1": generateMultiText("f",1); break;
+		case "f2": generateMultiText("f",2); break;
+		case "f3": generateMultiText("f",3); break;
 	}
 
 	copyText();
