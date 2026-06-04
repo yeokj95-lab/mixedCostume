@@ -229,7 +229,7 @@ function generateText(scr_type)
 		final_script.push("Make it look like a real expensive pre-painted physical collectible figure, not a flat illustration, not a live human cosplay photo, and not a raw game-model screenshot.\r\nEmphasize strong 3D volume, clean sculpted hair strands, refined face paint, crisp clothing folds, premium PVC texture, subtle paint gradients, and realistic material separation.");
 		final_script.push("Place the figure on a simple round display base on a computer desk, with a blurred keyboard and soft monitor glow in the background.\r\nUse professional studio product photography with clean premium studio lighting, soft diffused key light, subtle rim light, realistic shadows, shallow depth of field, and sharp focus on the figure as a physical collectible.");
 		final_script.push("CLOTHES: "+getClothes());
-		final_script.push("POSE: "+getPose(scr_type));
+		final_script.push("POSE: 피규어 받침대가 보이는 전신 샷, "+getPose(scr_type));
 		final_script.push("Facial expression: gentle natural smile, subtle cheerful expression, relaxed happy mood");
 		final_script.push("Image size : 3840 × 2160");
 	}
@@ -283,7 +283,7 @@ function generateMultiText(scr_type, tp)
 		if(tp==2)
 			{final_script.push("CLOTHES: "+getClothes());}
 		if(tp==3)
-			{final_script.push("POSE: "+getPose(scr_type));}
+			{final_script.push("POSE: 피규어 받침대가 보이는 전신 샷, "+getPose(scr_type));}
 		final_script.push("Facial expression: gentle natural smile, subtle cheerful expression, relaxed happy mood");
 		final_script.push("IMPORTANT: Draw all characters together in one unified scene with a single continuous background. Do NOT separate them into panels, grids, collage layouts, reference sheets, or individual character showcases. All characters must exist naturally in the same environment, sharing the same perspective, lighting, and atmosphere, interacting like a real group scene.");
 		final_script.push("GROUP HARMONY: all characters must feel like they belong to the same world, same series, and same illustration set, unified artistic direction and visual language across every character, consistent rendering quality, line weight, anatomy proportions, facial structure style, eye rendering style, lighting logic, and shading technique, harmonized color balance and shared atmospheric lighting, coordinated saturation and contrast across the ensemble, natural interaction and chemistry between characters, balanced spacing and overlapping silhouettes for visual cohesion, complementary poses that flow together compositionally instead of isolated standalone poses, subtle shared design motifs and repeating shape language, cohesive emotional tone and synchronized mood, ensemble composition with cinematic group balance, no character visually overpowering the others unless intentionally designated as the focal point, every character maintaining individuality while still blending seamlessly into a unified cast illustration ");
@@ -302,7 +302,7 @@ function generateMultiText(scr_type, tp)
 		}
 		if(tp==1 || tp==2)
 		{
-			group_script.push("POSE: "+getPose(scr_type)+"\r\n");
+			group_script.push("POSE: 피규어 받침대가 보이는 전신 샷, "+getPose(scr_type)+"\r\n");
 		}
 		
 	}
