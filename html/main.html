@@ -17,6 +17,7 @@
 		<th>포즈</th>
 		<td><select id="pose" style="width:400px;">
 		</select></td>
+		<td rowspan=3><button onclick="window.location.reload()">초기화</button></td>
 	</tr>
 	<tr>
 		<th>의상</th>
@@ -28,18 +29,17 @@
 		<td><select id="background" style="width:400px;">
 		</select></td>
 	</tr>
-	<tr><td colspan=2><hr></td></tr>
+	<tr><td colspan=3><hr></td></tr>
 	<tr>
-		<td colspan=2 align="center">
+		<td colspan=3 align="center">
 			<button onclick="generateText()">생성</button>
 			<button onclick="copyText()">복사</button>
 			<button onclick="generateRefresh()">갱신</button>
-			<button onclick="window.location.reload()">초기화</button>
 		</td>
 	</tr>
-	<tr><td colspan=2><hr></td></tr>
+	<tr><td colspan=3><hr></td></tr>
 	<tr>
-		<td colspan=2 align="center">
+		<td colspan=3 align="center">
 			<label for="mem1"><input type="radio" id="mem1" name="mem_radio" value="1"><span> 2~3인</span></label>
 			<label for="mem2"><input type="radio" id="mem2" name="mem_radio" value="2" checked><span> 2인</span></label>
 			<label for="mem3"><input type="radio" id="mem3" name="mem_radio" value="3"><span> 3인</span></label>
@@ -49,15 +49,15 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan=2 align="center">
+		<td colspan=3 align="center">
 			<button onclick="generateMultiText(1)">포즈, 의상 무작위</button>
 			<button onclick="generateMultiText(2)">포즈 무작위</button>
 			<button onclick="generateMultiText(3)">의상 무작위</button>
 		</td>
 	</tr>
-	<tr><td colspan=2><hr></td></tr>
+	<tr><td colspan=3><hr></td></tr>
 	<tr>
-		<td colspan=2 align="center">
+		<td colspan=3 align="center">
 			<table>
 				<tr>
 					<td><input type="checkbox" id="who1" name="who" value="로슬린"><span class="char_span">로슬린</span></td>
