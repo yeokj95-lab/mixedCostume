@@ -11,10 +11,10 @@ Korean fashion photoshoot, elegant daily outfit, soft lighting, realistic skin t
 A stylish young woman wearing an oversized gray hoodie, biker shorts, white sneakers, and a canvas tote bag. Natural long hair, minimal makeup, walking in a quiet Seoul neighborhood, soft daylight, realistic fabric texture, cozy Korean daily fashion, photorealistic, fashion editorial quality, cinematic lighting. 
 A fashionable girl in a cream knit cardigan, white crop t-shirt, light blue wide jeans, and Converse sneakers. Casual Korean street fashion, modern cafe background, soft sunlight, realistic skin texture, ultra detailed. 
 A trendy young woman wearing a striped long sleeve shirt, loose black slacks, simple silver jewelry, and New Balance sneakers. Modern Korean minimalist casual outfit, clean urban background, cinematic atmosphere. 
-A cute Korean girl wearing a navy sweatshirt, tennis skirt, white socks, and sneakers. Youthful everyday fashion, playful pose, spring street background, soft natural lighting, highly detailed. 
+A cute Korean girl wearing a sweatshirt, tennis skirt, white socks, and sneakers. Youthful everyday fashion, playful pose, spring street background, soft natural lighting, highly detailed. 
 A modern casual fashion look featuring a beige oversized jacket, black skinny jeans, white sneakers, and wireless headphones. Seoul street mood, realistic clothing folds, photorealistic editorial photography. 
 A lovely college girl wearing a pastel cardigan, white blouse, pleated skirt, knee socks, and loafers. University campus during spring, cherry blossom background, Korean fashion lookbook style. 
-A stylish university student in a navy varsity jacket, tennis skirt, sneakers, and backpack. Casual youthful atmosphere, walking through campus, cinematic daylight. 
+A stylish university student in a varsity jacket, tennis skirt, sneakers, and backpack. Casual youthful atmosphere, walking through campus, cinematic daylight. 
 A fashionable campus outfit with a beige trench coat, white knit top, denim skirt, and ankle boots. Korean college fashion aesthetic, warm sunlight, realistic textures. 
 A cute young woman wearing a hoodie layered under a denim jacket, black leggings, sneakers, and headphones. Modern Korean student look, realistic street photography style. 
 A fresh college fashion outfit featuring a cable knit sweater vest, white shirt, plaid skirt, loafers, and tote bag. Cozy academic atmosphere, ultra detailed. 
@@ -97,7 +97,7 @@ Teenage girl in modern Moroccan-inspired layered outfit, traditional textures an
 Young Mexican female model wearing modern traditional Mexican embroidered dress, floral crown, vibrant colorful background, artistic fashion editorial inspired by Mexican culture
 Teenage girl in luxury mariachi-inspired fashion outfit, silver embroidery, dramatic black fabrics, festive nighttime plaza atmosphere, cinematic high-fashion photography
 Young French female model wearing modern rococo-inspired couture dress, lace gloves, pearl accessories, luxurious Paris palace interior, cinematic high-fashion editorial photography
-Teenage girl in traditional Breton-inspired striped fashion, beret, navy wool skirt, coastal French village background, elegant Parisian street-style aesthetic
+Teenage girl in traditional Breton-inspired striped fashion, beret, wool skirt, coastal French village background, elegant Parisian street-style aesthetic
 Young Spanish female model wearing contemporary flamenco-inspired red dress, dramatic ruffles, Sevilla night atmosphere, cinematic luxury fashion editorial
 Teen girl in matador-inspired high fashion outfit, gold embroidery, structured jacket, urban Madrid background, avant-garde editorial photography
 Young Italian female model wearing luxurious Venetian carnival-inspired fashion, ornate lace mask, silk fabrics, Venice canal background, dramatic cinematic lighting
@@ -116,7 +116,7 @@ Young woman wearing modern detective-inspired outfit, tailored trench coat, leat
 Young female marine biologist in stylish exploration outfit, utility jumpsuit mixed with ocean-inspired details, futuristic research submarine background, cinematic adventure fashion photography
 Teenage girl wearing luxurious orchestra conductor-inspired fashion, dramatic black velvet suit, grand opera hall background, elegant cinematic editorial style
 Young woman in astronomy-inspired fashion outfit, celestial embroidery, sophisticated academic styling, giant observatory background, dreamy cosmic editorial photography
-Young female model wearing vintage European luxury train conductor uniform, navy tailored coat with gold buttons, retro train station atmosphere, cinematic fashion editorial
+Young female model wearing vintage European luxury train conductor uniform, tailored coat with gold buttons, retro train station atmosphere, cinematic fashion editorial
 Teen girl dressed as a mystical apothecary and alchemist, layered herbalist outfit, magical potion workshop background, fantasy cinematic fashion photography
 Young female racing driver wearing avant-garde motorsport-inspired fashion suit, aerodynamic details, futuristic racetrack background, bold luxury editorial photography
 Young woman in futuristic librarian-inspired fashion, oversized tailored blazer, smart glasses, endless digital library background, dark academia cyber aesthetic, ultra detailed editorial shoot
@@ -131,12 +131,12 @@ Teenage girl wearing modern firefighter protective uniform, dramatic emergency s
 Young female construction engineer wearing practical workwear and safety helmet, urban construction site background, realistic industrial fashion photography
 Young woman wearing luxury hotel receptionist uniform, elegant lobby interior, polished appearance, premium hospitality fashion editorial photography
 a white collared shirt with rolled sleeves, a loose fit grey v-neck sweater vest with chest pocket and school crest, black necktie, black pleated miniskirt, white socks, white sneakers,
-a white collared shirt with black striped necktie, untucked shirt, a baggy navy v-neck cardigan with school crest and button-up, pleated grey miniskirt, black knee-high socks, white sneakers,
+a white collared shirt with black striped necktie, untucked shirt, a baggy v-neck cardigan with school crest and button-up, pleated grey miniskirt, black knee-high socks, white sneakers,
 seifuku, a black sailor collar with long sleeves, black shirt with striped collar, white neckerchief, a black pleated knee-length skirt, black stockings, black loafers,
 a white collared shirt with long sleeves and school crest, dark blue striped loose tie, a pleated dark blue plaid miniskirt, white socks, black sneakers,
 white t-shirt, a baggy white collared open shirt with short sleeves and school crest, a pleated black miniskirt, white socks, black and white sneakers,
 a short sleeves white collared shirt with school crest, red and white striped loose tie, a pleated grey miniskirt, white socks, white sneakers,
-white collared shirt, a loose fit navy v-neck cardigan with school crest, brown pleated miniskirt, black knee-high socks, black loafers with heels,
+white collared shirt, a loose fit v-neck cardigan with school crest, brown pleated miniskirt, black knee-high socks, black loafers with heels,
 a white collared shirt with black necktie, a dark blue blazer jacket with school crest, matching pleated miniskirt, white knee-high socks, white sneakers,
 a white collared shirt with short sleeves, blue plaid bow, matching plaid pleated miniskirt, black knee-high socks, black loafers,
 white collared shirt with black striped tie, a loose-fit light cream cardigan with chest pocket and school crest, grey pleated miniskirt, black knee-highs, brown loafers,
@@ -145,8 +145,8 @@ white collared shirt, a grey hoodie with kangaroo pocket, a black puffer open ja
 a white collared shirt with red striped bow, a loose-fit black v-neck sweater with long sleeves, grey pleated miniskirt, black knee-high socks, black platform loafers,
 a white collared shirt with rolled sleeves, chest pocket with school crest, grey striped loose tie, black pleated miniskirt, black knee-high socks, black loafers,
 white collared shirt with red ribbon bowtie, a beige preppy cropped blazer jacket with school crest, unbutton, a dark grey pleated knee-length dress with matching belt, black knee-high socks, brown loafers,
-a white collared shirt with blue bow, a navy snug fit preppy blazer with chest pocket and school crest, pleated grey miniskirt, white socks, black loafers,
-a white t-shirt with ringer tee and navy trim, tuck in t-shirt with short sleeves, a navy buruma with white side stripes, white ankle socks, white sneakers,
+a white collared shirt with blue bow, a snug fit preppy blazer with chest pocket and school crest, pleated grey miniskirt, white socks, black loafers,
+a white t-shirt with ringer tee and trim, tuck in t-shirt with short sleeves, a buruma with white side stripes, white ankle socks, white sneakers,
 soft gray sailor-style short-sleeve dress with a large black ribbon bow on the chest, gold button accents and fitted waist belt detail, flowy flared skirt silhouette, white frilled ankle socks, glossy black Mary Jane low-heel shoes with buckle straps, cute and elegant semi-classic Japanese girly fashion aesthetic with a soft feminine vibe
 white fitted sleeveless camisole top, light blue denim short overalls with a single unfastened shoulder strap, rolled-up hem detail on the shorts, front utility pocket and brass button accents, casual slim-fit silhouette, clean white low-top canvas sneakers, minimalist youthful street fashion aesthetic with a soft casual summer vibe
 oversized cream-colored turtleneck sweater with extra-long loose sleeves and relaxed fit silhouette, soft knit texture with dropped shoulder design, cozy off-shoulder styling, bare legs for a minimalist oversized sweater look, plush reindeer antler headband accessory with fluffy earmuff-style band, soft winter-inspired casual fashion aesthetic with a cute and cozy loungewear vibe
