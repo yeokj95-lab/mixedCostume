@@ -303,7 +303,10 @@ function generateMultiText(scr_type, tp)
 		}
 		if(tp==1 || tp==2)
 		{
-			group_script.push("POSE: 피규어 받침대가 보이는 전신 샷, "+getPose(scr_type)+"\r\n");
+			if(scr_type=="c")
+				group_script.push("POSE: "+getPose(scr_type)+"\r\n");
+			else if (scr_type=="f")
+				group_script.push("POSE: 피규어 받침대가 보이는 전신 샷, "+getPose(scr_type)+"\r\n");
 		}
 		
 	}
