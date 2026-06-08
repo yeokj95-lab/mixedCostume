@@ -449,23 +449,23 @@ window.addEventListener("keydown", function(event) {
 		// case "5" : generateGroupText2(); break;
 		// case "6" : generateGroupText3(); break;
 		
-		case "q" : console.log(event.key);$("who1").is(':checked')?$("who1").prop('checked',false):$("who1").prop('checked',true); break;
-		case "w" : console.log(event.key);$("who2").is(':checked')?$("who2").prop('checked',false):$("who2").prop('checked',true); break;
-		case "e" : $("who3").is(':checked')?$("who3").prop('checked',false):$("who3").prop('checked',true); break;
-		case "r" : $("who4").is(':checked')?$("who4").prop('checked',false):$("who4").prop('checked',true); break;
-		case "t" : $("who5").is(':checked')?$("who5").prop('checked',false):$("who5").prop('checked',true); break;
-		case "y" : $("who6").is(':checked')?$("who6").prop('checked',false):$("who6").prop('checked',true); break;
-		case "u" : $("who7").is(':checked')?$("who7").prop('checked',false):$("who7").prop('checked',true); break;
+		case "q" : $("#who1").is(':checked')?$("#who1").prop('checked',false):$("#who1").prop('checked',true); break;
+		case "w" : $("#who2").is(':checked')?$("#who2").prop('checked',false):$("#who2").prop('checked',true); break;
+		case "e" : $("#who3").is(':checked')?$("#who3").prop('checked',false):$("#who3").prop('checked',true); break;
+		case "r" : $("#who4").is(':checked')?$("#who4").prop('checked',false):$("#who4").prop('checked',true); break;
+		case "t" : $("#who5").is(':checked')?$("#who5").prop('checked',false):$("#who5").prop('checked',true); break;
+		case "y" : $("#who6").is(':checked')?$("#who6").prop('checked',false):$("#who6").prop('checked',true); break;
+		case "u" : $("#who7").is(':checked')?$("#who7").prop('checked',false):$("#who7").prop('checked',true); break;
 		
-		case "a" : $("who8").is(':checked')?$("who8").prop('checked',false):$("who8").prop('checked',true);  break;
-		case "s" : $("who9").is(':checked')?$("who9").prop('checked',false):$("who9").prop('checked',true); break;
-		case "d" : $("who10").is(':checked')?$("who10").prop('checked',false):$("who10").prop('checked',true); break;
-		case "f" : $("who11").is(':checked')?$("who11").prop('checked',false):$("who11").prop('checked',true); break;
-		case "g" : $("who12").is(':checked')?$("who12").prop('checked',false):$("who12").prop('checked',true); break;
-		case "h" : $("who13").is(':checked')?$("who13").prop('checked',false):$("who13").prop('checked',true); break;
-		case "j" : $("who14").is(':checked')?$("who14").prop('checked',false):$("who14").prop('checked',true); break;
+		case "a" : $("#who8").is(':checked')?$("#who8").prop('checked',false):$("#who8").prop('checked',true);  break;
+		case "s" : $("#who9").is(':checked')?$("#who9").prop('checked',false):$("#who9").prop('checked',true); break;
+		case "d" : $("#who10").is(':checked')?$("#who10").prop('checked',false):$("#who10").prop('checked',true); break;
+		case "f" : $("#who11").is(':checked')?$("#who11").prop('checked',false):$("#who11").prop('checked',true); break;
+		case "g" : $("#who12").is(':checked')?$("#who12").prop('checked',false):$("#who12").prop('checked',true); break;
+		case "h" : $("#who13").is(':checked')?$("#who13").prop('checked',false):$("#who13").prop('checked',true); break;
+		case "j" : $("#who14").is(':checked')?$("#who14").prop('checked',false):$("#who14").prop('checked',true); break;
 
-		case "z" : $("who15").is(':checked')?$("who15").prop('checked',false):$("who15").prop('checked',true); break;
+		case "z" : $("#who15").is(':checked')?$("#who15").prop('checked',false):$("#who15").prop('checked',true); break;
 	}
 });  
 $('input:checkbox[name="who"]').change(function () {
