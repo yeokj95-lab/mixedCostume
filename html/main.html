@@ -364,6 +364,7 @@ function generateRefresh()
 		case "f1": generateMultiText("f",1); break;
 		case "f2": generateMultiText("f",2); break;
 		case "f3": generateMultiText("f",3); break;
+		case "u0": generateCustom(); break;
 	}
 
 	copyText();
@@ -382,6 +383,7 @@ function scriptSetting(ct)
 }
 function generateCustom()
 {
+	$("#generatetype").val("u0");
 	var scr_type = $('input[name="scrtp"]:checked').val();
 	var memCnt = $('input[name="mem_radio"]:checked').val();
 	
