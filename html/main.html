@@ -438,6 +438,7 @@ function generateCustom()
 }
 scriptSetting('p1');
 window.addEventListener("keydown", function(event) {
+	console.log(event.key);
 	switch (event.key)
 	{
 		case "1" : generateText('c'); break;
