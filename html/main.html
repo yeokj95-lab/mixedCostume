@@ -112,25 +112,26 @@
 		<td colspan=3 align="center">
 			<table>
 				<tr>
-					<td><input type="checkbox" id="who1" name="who" value="로슬린"><span class="char_span">로슬린</span></td>
-					<td><input type="checkbox" id="who2" name="who" value="로웬타"><span class="char_span">로웬타</span></td>
-					<td><input type="checkbox" id="who3" name="who" value="리얼"><span class="char_span">리얼</span></td>
-					<td><input type="checkbox" id="who4" name="who" value="마치"><span class="char_span">마치</span></td>
-					<td><input type="checkbox" id="who5" name="who" value="사실"><span class="char_span">사실</span></td>
-					<td><input type="checkbox" id="who6" name="who" value="설마"><span class="char_span">설마</span></td>
-					<td><input type="checkbox" id="who7" name="who" value="소니라"><span class="char_span">소니라</span></td>
+					<td><input type="checkbox" id="who1" name="who" value="가짜"><span class="char_span">가짜</span></td>
+					<td><input type="checkbox" id="who2" name="who" value="로슬린"><span class="char_span">로슬린</span></td>
+					<td><input type="checkbox" id="who3" name="who" value="로웬타"><span class="char_span">로웬타</span></td>
+					<td><input type="checkbox" id="who4" name="who" value="리얼"><span class="char_span">리얼</span></td>
+					<td><input type="checkbox" id="who5" name="who" value="마치"><span class="char_span">마치</span></td>
+					<td><input type="checkbox" id="who6" name="who" value="사실"><span class="char_span">사실</span></td>
+					<td><input type="checkbox" id="who7" name="who" value="설마"><span class="char_span">설마</span></td>
+					
 				</tr>
 				<tr>
-					<td><input type="checkbox" id="who8" name="who" value="아마"><span class="char_span">아마</span></td>
-					<td><input type="checkbox" id="who9" name="who" value="저런"><span class="char_span">저런</span></td>
-					<td><input type="checkbox" id="who10" name="who" value="정말"><span class="char_span">정말</span></td>
-					<td><input type="checkbox" id="who11" name="who" value="페이기"><span class="char_span">페이기</span></td>
-					<td><input type="checkbox" id="who12" name="who" value="하빌라"><span class="char_span">하빌라</span></td>
-					<td><input type="checkbox" id="who13" name="who" value="헤인델"><span class="char_span">헤인델</span></td>
-					<td><input type="checkbox" id="who14" name="who" value="혹시"><span class="char_span">혹시</span></td>
+					<td><input type="checkbox" id="who8" name="who" value="소니라"><span class="char_span">소니라</span></td>
+					<td><input type="checkbox" id="who9" name="who" value="아마"><span class="char_span">아마</span></td>
+					<td><input type="checkbox" id="who10" name="who" value="저런"><span class="char_span">저런</span></td>
+					<td><input type="checkbox" id="who11" name="who" value="정말"><span class="char_span">정말</span></td>
+					<td><input type="checkbox" id="who12" name="who" value="페이기"><span class="char_span">페이기</span></td>
+					<td><input type="checkbox" id="who13" name="who" value="하빌라"><span class="char_span">하빌라</span></td>
+					<td><input type="checkbox" id="who14" name="who" value="헤인델"><span class="char_span">헤인델</span></td>
 				</tr>
 				<tr>
-					<td><input type="checkbox" id="who15" name="who" value="가짜"><span class="char_span">가짜</span></td>
+					<td><input type="checkbox" id="who15" name="who" value="혹시"><span class="char_span">혹시</span></td>
 				</tr>
 			</table>
 		</td>
@@ -462,6 +463,8 @@ window.addEventListener("keydown", function(event) {
 		case "g" : document.getElementById("who12").checked==true?document.getElementById("who12").checked=false:document.getElementById("who12").checked=true; break;
 		case "h" : document.getElementById("who13").checked==true?document.getElementById("who13").checked=false:document.getElementById("who13").checked=true; break;
 		case "j" : document.getElementById("who14").checked==true?document.getElementById("who14").checked=false:document.getElementById("who14").checked=true; break;
+
+		case "z" : document.getElementById("who15").checked==true?document.getElementById("who15").checked=false:document.getElementById("who15").checked=true; break;
 	}
 });  
 $('input:checkbox[name="who"]').change(function () {
