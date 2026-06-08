@@ -459,5 +459,14 @@ window.addEventListener("keydown", function(event) {
 		case "j" : document.getElementById("who14").checked==true?document.getElementById("who14").checked=false:document.getElementById("who14").checked=true; break;
 	}
 });  
+$('input:checkbox[name="who"]').change(function () {
+    if ($(this).is(':checked')) {
+        $(this).parent().addClass("sel_com");
+        $(this).parent().removeClass("sel_tmp");
+    } else {
+    	$(this).parent().removeClass("sel_com");
+        $(this).parent().removeClass("sel_tmp");
+    }
+});
 </script>
 </html>
