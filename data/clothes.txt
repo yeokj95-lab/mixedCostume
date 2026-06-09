@@ -78,58 +78,6 @@
 78 -> Young female model wearing cloud-harvesting inspired fashion, oversized soft textures, floating sky harbor background, surreal fantasy mood, cinematic dream aesthetic
 79 -> Stylish young woman in retro-futuristic café uniform from an alternate timeline, vintage sci-fi diner background, surreal neon clocks, cinematic editorial fashion photography
 80 -> Young woman wearing fashion inspired by volcanic flowers, black lava-textured fabrics with vivid blooming petals, smoky cinematic background, dramatic couture photography
-81 -> Teen girl wearing butterfly-wing inspired armor street fashion, iridescent layered textures, urban fantasy cityscape, bold futuristic editorial style
-82 -> Young female model in fashion combining icy textures and desert nomad aesthetics, fur mixed with sand-colored fabrics, surreal frozen desert background, cinematic luxury fashion shoot
-83 -> Young woman in arcade-machine inspired idol fashion, pixel graphics, neon trims, retro gaming center background, energetic Y2K aesthetic, ultra detailed fashion photography
-84 -> Stylish young female influencer wearing gothic opera-inspired luxury fashion, dramatic velvet outfit, dark theater stage, elegant vampire aesthetic, cinematic editorial photography
-85 -> Young Korean female model wearing modern reinterpretation of traditional hanbok, cropped jeogori jacket, flowing layered skirt, minimalist Seoul background, elegant contemporary fashion editorial, ultra detailed photography
-86 -> Teenage girl wearing luxurious Joseon dynasty-inspired royal hanbok, intricate embroidery, traditional hair accessories, palace courtyard background, cinematic Korean historical fashion photography
-87 -> Young Japanese female model wearing futuristic kimono-inspired streetwear, obi belt with cyberpunk details, neon Tokyo alley background, high fashion editorial photography
-88 -> Young woman in Taisho-era inspired Japanese fashion, hakama skirt, lace blouse, vintage café atmosphere, romantic cinematic aesthetic
-89 -> Young Chinese female model wearing elegant modern hanfu, flowing silk fabrics, soft pastel tones, ancient garden background, dreamy luxury fashion editorial
-90 -> Teenage girl wearing futuristic qipao dress with holographic embroidery, neon Shanghai skyline, cinematic cyberpunk atmosphere, ultra detailed fashion photography
-91 -> Young Indian female model wearing luxurious embroidered saree, gold jewelry, palace-inspired setting, rich cinematic lighting, high fashion editorial photography
-92 -> Teenage girl in modern lehenga fusion fashion, sneakers mixed with traditional fabrics, colorful urban India background, vibrant Gen Z fashion aesthetic
-93 -> Young Thai female model wearing elegant traditional Thai silk dress, gold detailing, temple-inspired luxury background, cinematic editorial style
-94 -> Teen girl wearing contemporary Thai-inspired streetwear mixed with traditional patterns, Bangkok night market neon lights, trendy fashion photography
-95 -> Young Moroccan female model wearing luxurious embroidered kaftan, desert palace background, warm golden sunset lighting, elegant editorial fashion photography
-96 -> Teenage girl in modern Moroccan-inspired layered outfit, traditional textures and jewelry, colorful Marrakech bazaar atmosphere, cinematic travel fashion shoot
-97 -> Young Mexican female model wearing modern traditional Mexican embroidered dress, floral crown, vibrant colorful background, artistic fashion editorial inspired by Mexican culture
-98 -> Teenage girl in luxury mariachi-inspired fashion outfit, silver embroidery, dramatic black fabrics, festive nighttime plaza atmosphere, cinematic high-fashion photography
-99 -> Young French female model wearing modern rococo-inspired couture dress, lace gloves, pearl accessories, luxurious Paris palace interior, cinematic high-fashion editorial photography
-100 -> Teenage girl in traditional Breton-inspired striped fashion, beret, wool skirt, coastal French village background, elegant Parisian street-style aesthetic
-101 -> Young Spanish female model wearing contemporary flamenco-inspired dress, dramatic ruffles, Sevilla night atmosphere, cinematic luxury fashion editorial
-102 -> Teen girl in matador-inspired high fashion outfit, gold embroidery, structured jacket, urban Madrid background, avant-garde editorial photography
-103 -> Young Italian female model wearing luxurious Venetian carnival-inspired fashion, ornate lace mask, silk fabrics, Venice canal background, dramatic cinematic lighting
-104 -> Teenage girl in traditional Sicilian-inspired floral dress, Mediterranean village atmosphere, warm sunlight, luxury Dolce Vita fashion aesthetic
-105 -> Young German female model wearing modernized dirndl dress, elegant corset silhouette, alpine village background, stylish Oktoberfest-inspired editorial photography
-106 -> Teen girl in dark Black Forest traditional-inspired fashion, velvet textures, lace apron details, mystical forest atmosphere, cinematic gothic editorial
-107 -> Young Scottish female model wearing tartan-inspired luxury streetwear, layered plaid fabrics, Edinburgh castle background, edgy modern fashion photography
-108 -> Teenage girl in Celtic-inspired ceremonial dress, silver jewelry, misty Highlands scenery, fantasy editorial photography
-109 -> Young Greek female model wearing modernized ancient Greek draped dress, gold accessories, Santorini sunset background, luxurious mythological fashion editorial
-110 -> Teen girl in traditional Greek island-inspired embroidered outfit, white-and-blue color palette, seaside village atmosphere, dreamy Mediterranean photography
-111 -> Young Russian female model wearing luxurious tsarina-inspired winter fashion, fur-lined embroidered gown, snowy palace background, cinematic royal editorial photography
-112 -> Teenage girl in traditional Slavic folk-inspired fashion, floral headpiece, richly embroidered fabrics, enchanted forest setting, ultra detailed fantasy fashion shoot
-113 -> Young female flight attendant wearing futuristic airline uniform, sleek metallic accents, holographic scarf, luxury spaceship cabin interior, cinematic cyberpunk fashion editorial, ultra detailed photography
-114 -> Teenage girl in elegant pastry chef-inspired fashion, cream-colored tailored uniform, artistic dessert atelier background, Paris luxury bakery aesthetic, high-fashion editorial photography
-115 -> Young woman wearing modern detective-inspired outfit, tailored trench coat, leather gloves, noir city alley background, cinematic mystery atmosphere, editorial fashion shoot
-116 -> Young female marine biologist in stylish exploration outfit, utility jumpsuit mixed with ocean-inspired details, futuristic research submarine background, cinematic adventure fashion photography
-117 -> Teenage girl wearing luxurious orchestra conductor-inspired fashion, dramatic black velvet suit, grand opera hall background, elegant cinematic editorial style
-118 -> Young woman in astronomy-inspired fashion outfit, celestial embroidery, sophisticated academic styling, giant observatory background, dreamy cosmic editorial photography
-119 -> Young female model wearing vintage European luxury train conductor uniform, tailored coat with gold buttons, retro train station atmosphere, cinematic fashion editorial
-120 -> Teen girl dressed as a mystical apothecary and alchemist, layered herbalist outfit, magical potion workshop background, fantasy cinematic fashion photography
-121 -> Young female racing driver wearing avant-garde motorsport-inspired fashion suit, aerodynamic details, futuristic racetrack background, bold luxury editorial photography
-122 -> Young woman in futuristic librarian-inspired fashion, oversized tailored blazer, smart glasses, endless digital library background, dark academia cyber aesthetic, ultra detailed editorial shoot
-123 -> Young female office worker wearing modern business casual fashion, tailored blazer, pencil skirt, clean corporate office background, natural lighting, elegant fashion editorial photography
-124 -> Teenage girl wearing stylish modern nurse uniform, soft pastel medical scrubs, bright hospital environment, clean and friendly atmosphere, realistic fashion photography
-125 -> Young female police officer in fitted modern police uniform, urban city background, confident pose, cinematic lighting, detailed editorial photography
-126 -> Young woman wearing elegant airline flight attendant uniform, luxury airplane cabin interior, sophisticated posture, premium fashion editorial aesthetic
-127 -> Teen girl in professional chef uniform, white chef coat and apron, modern restaurant kitchen background, warm cinematic lighting, realistic fashion photography
-128 -> Young female teacher wearing smart casual cardigan and pleated skirt, cozy classroom background, intellectual and friendly atmosphere, Korean fashion editorial style
-129 -> Young woman in trendy café barista uniform, apron over casual fashion, cozy coffee shop interior, warm tones, lifestyle fashion photography
-130 -> Teenage girl wearing modern firefighter protective uniform, dramatic emergency station background, cinematic realism, strong and confident pose
-131 -> Young female construction engineer wearing practical workwear and safety helmet, urban construction site background, realistic industrial fashion photography
-132 -> Young woman wearing luxury hotel receptionist uniform, elegant lobby interior, polished appearance, premium hospitality fashion editorial photography
 133 -> a white collared shirt with rolled sleeves, a loose fit grey v-neck sweater vest with chest pocket and school crest, black necktie, black pleated miniskirt, white socks, white sneakers,
 134 -> a white collared shirt with black striped necktie, untucked shirt, a baggy v-neck cardigan with school crest and button-up, pleated grey miniskirt, black knee-high socks, white sneakers,
 135 -> seifuku, a black sailor collar with long sleeves, black shirt with striped collar, white neckerchief, a black pleated knee-length skirt, black stockings, black loafers,
