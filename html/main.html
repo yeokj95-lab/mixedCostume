@@ -21,7 +21,7 @@
 		<td rowspan=13 valign="top">
 			<table>
 				<tr>
-					<td align="center" colspan=2>Clothes : <span id="rslt_clothes"></span>, Pose : <span id="rslt_pose"></span></td>
+					<td align="center" colspan=2><div id="rslt_str" class="dp_n">Clothes : <span id="rslt_clothes"></span>, Pose : <span id="rslt_pose"></span></div></td>
 				</tr>
 				<tr>
 					<td colspan=2 align="center">
@@ -244,6 +244,7 @@ function getMember(memcnt)
 }
 function generateText(scr_type) 
 {
+	$("#rslt_str").addClass("dp_n");
 	$("#generatetype").val(scr_type+"0");
 	getMember(1);
 	
@@ -284,6 +285,7 @@ async function copyText()
 	catch (err) {console.error(err);}
 	
 	$("#copycheck").val("copy");
+	$("#rslt_str").removeClass("dp_n");
 	showToast("Copied");
 }
 function generateMultiText(scr_type, tp) 
