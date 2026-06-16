@@ -21,6 +21,10 @@
 		<td rowspan=13 valign="top">
 			<table>
 				<tr>
+					<td align="center">Clothes : <span id="rslt_clothes"></span></td>
+					<td align="center">Pose : <span id="rslt_pose"></span></td>
+				</tr>
+				<tr>
 					<td colspan=2 align="center">
 						<label for="scrtp1"><input type="radio" id="scrtp1" name="scrtp" value="c" checked><span> 컨셉</span></label>
 						<label for="scrtp2"><input type="radio" id="scrtp2" name="scrtp" value="f"><span> 피규어</span></label>
@@ -174,7 +178,8 @@ function getPose(poseVal,scr_type)
 	
 	var poseInd = Math.floor(Math.random() * ($("#pose option").length - 1));
 	var poseStr = (poseVal === "random")?$("#pose option").eq(poseInd).text():$('#pose option[value="'+poseVal+'"]').text();
-	poseStr = poseStr.split(" -> ")[1]
+	$("#rslt_pose").text(poseStr.split(" -> ")[0]);
+	poseStr = poseStr.split(" -> ")[1];
 	if(scr_type=="f")
 	{
 		var split_pose = poseStr.split(",");
@@ -197,6 +202,7 @@ function getClothes(cloVal)
 {
 	var cloInd = Math.floor(Math.random() * ($("#clothes option").length - 1));
 	var cloStr = (cloVal === "random")?$("#clothes option").eq(cloInd).text():$('#clothes option[value="'+cloVal+'"]').text();
+	$("#rslt_clothes").text(cloStr.split(" -> ")[0]);
 	return cloStr.split(" -> ")[1];
 }
 function getBackground(bgVal)
