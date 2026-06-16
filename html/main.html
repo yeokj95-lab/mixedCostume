@@ -21,7 +21,7 @@
 		<td rowspan=13 valign="top">
 			<table>
 				<tr>
-					<td align="center" colspan=2><div id="rslt_str" class="dp_n">Clothes : <span id="rslt_clothes"></span>, Pose : <span id="rslt_pose"></span></div></td>
+					<td align="center" colspan=2><div id="rslt_str" class="dp_n">C : <span id="rslt_clothes"></span>, P : <span id="rslt_pose"></span>, B : <span id="rslt_background"></span></div></td>
 				</tr>
 				<tr>
 					<td colspan=2 align="center">
@@ -208,6 +208,7 @@ function getBackground(bgVal)
 {
 	var bgInd = Math.floor(Math.random() * ($("#background option").length - 1));
 	var bgStr = (bgVal === "random")?$("#background option").eq(bgInd).text():$('#background option[value="'+bgVal+'"]').text();
+	$("#rslt_background").text(bgStr.split(" -> ")[0]);
 	return bgStr.split(" -> ")[1];
 }
 function getMember(memcnt)
