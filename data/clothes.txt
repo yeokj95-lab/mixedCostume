@@ -1,4 +1,4 @@
-p133 -> a white collared shirt with rolled sleeves, a loose fit grey v-neck sweater vest with chest pocket and school crest, black necktie, black pleated miniskirt, white socks, white sneakers,
+133 -> a white collared shirt with rolled sleeves, a loose fit grey v-neck sweater vest with chest pocket and school crest, black necktie, black pleated miniskirt, white socks, white sneakers,
 134 -> a white collared shirt with black striped necktie, untucked shirt, a baggy v-neck cardigan with school crest and button-up, pleated grey miniskirt, black knee-high socks, white sneakers,
 135 -> seifuku, a black sailor collar with long sleeves, black shirt with striped collar, white neckerchief, a black pleated knee-length skirt, black stockings, black loafers,
 136 -> a white collared shirt with long sleeves and school crest, dark blue striped loose tie, a pleated dark blue plaid miniskirt, white socks, black sneakers,
