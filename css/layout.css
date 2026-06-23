@@ -31,6 +31,8 @@ button {width:150px; border:0px solid #fff; padding:10px 0px;}
 .but_theme1:hover {background-color:#765784;}
 .but_theme2 {background-color:#303d4b; color:white;}
 .but_theme2:hover {background-color:#405165;}
+.but_theme3 {background-color:#44342e; color:white;}
+.but_theme3:hover {background-color:#8b6f63;}
 .dp_n {display:none;}
 .char_span {width:60px;align:left;display:inline-block;padding-left:5px;} 
 .sel_tmp {background-color:#aec8ce;}
