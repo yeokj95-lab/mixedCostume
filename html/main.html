@@ -111,6 +111,16 @@
 		</td>
 	</tr>
 	<tr><td colspan=3><hr></td></tr>
+	<tr><td colspan=3 class="subtitle">피규어</td></tr>
+	<tr>
+		<td align="center">
+			<button class="but_theme3" onclick="generateText('p')">싱글</button>
+		</td>
+		<td colspan=2 align="center">
+			
+		</td>
+	</tr>
+	<tr><td colspan=3><hr></td></tr>
 	<tr>
 		<td colspan=3 align="center">
 			<table>
@@ -276,6 +286,21 @@ function generateText(scr_type)
 		final_script.push("POSE: 피규어 받침대가 보이는 전신 샷, "+getPose($("#pose option:selected").val(),scr_type));
 		final_script.push("Facial expression: gentle natural smile, subtle cheerful expression, relaxed happy mood");
 		final_script.push("Image size : 3840 × 2160");
+	}
+	else if (scr_type=="p")
+	{
+		final_script.push("Use the attached reference image as the character reference.");
+		final_script.push("DEEP CHARACTER ANALYSIS — before drawing anything, analyze the reference image thoroughly and infer: - Visual features: hairstyle, hair length, hair color and highlights, bangs shape, eye shape, eye color, facial impression, skin tone, outfit details, fabric types, accessories, body proportions, signature items Keep the person recognizable, draw them as a charming character high-end semi-realistic Japanese-Korean hybrid illustration style — finished professional artwork with rich textural realism. ");
+		final_script.push("CLOTHES: "+getClothes($("#clothes option:selected").val()));
+		final_script.push("POSE: "+getPose($("#pose option:selected").val(),scr_type));
+		final_script.push("STYLE: high-end semi-realistic anime illustration with strong textural detail, refined character design art blending Japanese light novel illustration depth with Korean webtoon polish (日本ライトノベル × 한국 웹툰 일러스트), top-tier pixiv illustrator quality, 2D hand-painted semi-realistic anime rendering combined with elegant mature anime face proportions, rich painterly shading with smooth gradient blending, detailed light and shadow with proper atmospheric depth, glossy and luminous finish on key surfaces, mature refined anime face proportions on a realistically rendered body, Avoid any 3D game-rendered look, CGI aesthetics, Unreal Engine style, plastic skin, overly sharp game character lighting, or artificial digital-render appearance. The final image should feel like a polished hand-painted semi-realistic illustration, not a video game character render. ");
+		final_script.push("SKIN RENDERING: Soft matte porcelain-like skin painted with smooth 2D gradients, subtle blush, delicate shadow transitions, and gentle hand-painted texture. Avoid waxy skin, plastic skin, hyper-smooth doll skin, realistic subsurface scattering, oily highlights, pore-level realism, and 3D shader-like skin. ");
+		final_script.push("HAIR RENDERING: Hair should be painted as delicate 2D illustration hair with soft layered masses, fine hand-drawn strands, airy edges, and painterly highlights. Avoid 3D particle hair, realistic hair simulation, plastic hair, overly sharp strand rendering, and glossy game-character hair. ");
+		final_script.push("COLOR: color palette based on the reference image, limited to 3–5 main colors, rich painterly rendering with smooth gradient blending and realistic light interaction, glossy finish on key surfaces (eyes, hair, lips, signature item), atmospheric depth with proper shadow weight, cohesive color story across the whole sheet — overall mood of the coloring should match the character's analyzed personality ");
+		final_script.push("ANATOMY CONTROL: anatomically correct body, natural human pose, realistic joint bending, balanced posture, correct limb proportions, natural hand placement, physically plausible pose ");
+		final_script.push("background: "+getBackground($("#background option:selected").val()));
+		final_script.push("Canvas size: 1440×3120, vertical 19.5:9 aspect ratio, designed specifically for iPhone 17 Pro Max wallpaper");
+		final_script.push("Character placement: full body character, centered composition, character height occupies approximately 75% of the screen height, head positioned at 20~25% from the top edge, eyes positioned around 40~45% of screen height, feet positioned 8~10% above the bottom edge, balanced negative space around the character, entire body fully visible, no cropping, long legs emphasized, elegant silhouette");
 	}
 	$("#result").val(final_script.join("\r\n\r\n"));
 }
@@ -453,8 +478,9 @@ window.addEventListener("keydown", function(event) {
 	{
 		case "1" : generateText('c'); break;
 		case "2" : generateText('f'); break;
+		case "3" : generateText('p'); break;
 		case "`" : copyText(); break;
-		// case "3" : clearList(); break;
+		
 		// case "4" : generateGroupText1(); break;
 		// case "5" : generateGroupText2(); break;
 		// case "6" : generateGroupText3(); break;
