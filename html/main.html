@@ -61,8 +61,10 @@
 	</tr>
 	<tr>
 		<th>의상</th>
-		<td><select id="clothes" style="width:400px;">
-		</select></td>
+		<td>
+			<select id="clothes" style="width:400px;"></select>
+			<input type="checkbox" id="clothes_color">색상변경
+		</td>
 	</tr>
 	<tr>
 		<th>배경</th>
@@ -265,6 +267,8 @@ function generateText(scr_type)
 		final_script.push("Use the attached reference image as the character reference.");
 		final_script.push("DEEP CHARACTER ANALYSIS — before drawing anything, analyze the reference image thoroughly and infer: - Visual features: hairstyle, hair length, hair color and highlights, bangs shape, eye shape, eye color, facial impression, skin tone, outfit details, fabric types, accessories, body proportions, signature items Keep the person recognizable, draw them as a charming character high-end semi-realistic Japanese-Korean hybrid illustration style — finished professional artwork with rich textural realism. ");
 		final_script.push("CLOTHES: "+getClothes($("#clothes option:selected").val()));
+		if($("#clothes_color").is(":checked"))
+			final_script.push("CLOTHES COLOR : If specific clothing colors are mentioned, treat them as suggestions rather than strict requirements. You may substitute them with other suitable and aesthetically pleasing colors while keeping every other aspect of the outfit exactly the same");
 		final_script.push("POSE: "+getPose($("#pose option:selected").val(),scr_type));
 		final_script.push("STYLE: high-end semi-realistic anime illustration with strong textural detail, refined character design art blending Japanese light novel illustration depth with Korean webtoon polish (日本ライトノベル × 한국 웹툰 일러스트), top-tier pixiv illustrator quality, 2D hand-painted semi-realistic anime rendering combined with elegant mature anime face proportions, rich painterly shading with smooth gradient blending, detailed light and shadow with proper atmospheric depth, glossy and luminous finish on key surfaces, mature refined anime face proportions on a realistically rendered body, Avoid any 3D game-rendered look, CGI aesthetics, Unreal Engine style, plastic skin, overly sharp game character lighting, or artificial digital-render appearance. The final image should feel like a polished hand-painted semi-realistic illustration, not a video game character render. ");
 		final_script.push("SKIN RENDERING: Soft matte porcelain-like skin painted with smooth 2D gradients, subtle blush, delicate shadow transitions, and gentle hand-painted texture. Avoid waxy skin, plastic skin, hyper-smooth doll skin, realistic subsurface scattering, oily highlights, pore-level realism, and 3D shader-like skin. ");
@@ -283,6 +287,8 @@ function generateText(scr_type)
 		final_script.push("Make it look like a real expensive pre-painted physical collectible figure, not a flat illustration, not a live human cosplay photo, and not a raw game-model screenshot.\r\nEmphasize strong 3D volume, clean sculpted hair strands, refined face paint, crisp clothing folds, premium PVC texture, subtle paint gradients, and realistic material separation.");
 		final_script.push("Place the figure on a simple round display base on a computer desk, with a blurred keyboard and soft monitor glow in the background.\r\nUse professional studio product photography with clean premium studio lighting, soft diffused key light, subtle rim light, realistic shadows, shallow depth of field, and sharp focus on the figure as a physical collectible.");
 		final_script.push("CLOTHES: "+getClothes($("#clothes option:selected").val()));
+		if($("#clothes_color").is(":checked"))
+			final_script.push("CLOTHES COLOR : If specific clothing colors are mentioned, treat them as suggestions rather than strict requirements. You may substitute them with other suitable and aesthetically pleasing colors while keeping every other aspect of the outfit exactly the same");
 		final_script.push("POSE: 피규어 받침대가 보이는 전신 샷, "+getPose($("#pose option:selected").val(),scr_type));
 		final_script.push("Facial expression: gentle natural smile, subtle cheerful expression, relaxed happy mood");
 		final_script.push("Image size : 3840 × 2160");
@@ -292,6 +298,8 @@ function generateText(scr_type)
 		final_script.push("Use the attached reference image as the character reference.");
 		final_script.push("DEEP CHARACTER ANALYSIS — before drawing anything, analyze the reference image thoroughly and infer: - Visual features: hairstyle, hair length, hair color and highlights, bangs shape, eye shape, eye color, facial impression, skin tone, outfit details, fabric types, accessories, body proportions, signature items Keep the person recognizable, draw them as a charming character high-end semi-realistic Japanese-Korean hybrid illustration style — finished professional artwork with rich textural realism. ");
 		final_script.push("CLOTHES: "+getClothes($("#clothes option:selected").val()));
+		if($("#clothes_color").is(":checked"))
+			final_script.push("CLOTHES COLOR : If specific clothing colors are mentioned, treat them as suggestions rather than strict requirements. You may substitute them with other suitable and aesthetically pleasing colors while keeping every other aspect of the outfit exactly the same");
 		final_script.push("POSE: "+getPose($("#pose option:selected").val(),scr_type));
 		final_script.push("STYLE: high-end semi-realistic anime illustration with strong textural detail, refined character design art blending Japanese light novel illustration depth with Korean webtoon polish (日本ライトノベル × 한국 웹툰 일러스트), top-tier pixiv illustrator quality, 2D hand-painted semi-realistic anime rendering combined with elegant mature anime face proportions, rich painterly shading with smooth gradient blending, detailed light and shadow with proper atmospheric depth, glossy and luminous finish on key surfaces, mature refined anime face proportions on a realistically rendered body, Avoid any 3D game-rendered look, CGI aesthetics, Unreal Engine style, plastic skin, overly sharp game character lighting, or artificial digital-render appearance. The final image should feel like a polished hand-painted semi-realistic illustration, not a video game character render. ");
 		final_script.push("SKIN RENDERING: Soft matte porcelain-like skin painted with smooth 2D gradients, subtle blush, delicate shadow transitions, and gentle hand-painted texture. Avoid waxy skin, plastic skin, hyper-smooth doll skin, realistic subsurface scattering, oily highlights, pore-level realism, and 3D shader-like skin. ");
@@ -329,7 +337,11 @@ function generateMultiText(scr_type, tp)
 		final_script.push("Use the attached reference image as the character reference.");
 		final_script.push("DEEP CHARACTER ANALYSIS — before drawing anything, analyze the reference image thoroughly and infer: - Visual features: hairstyle, hair length, hair color and highlights, bangs shape, eye shape, eye color, facial impression, skin tone, outfit details, fabric types, accessories, body proportions, signature items Keep the person recognizable, draw them as a charming character high-end semi-realistic Japanese-Korean hybrid illustration style — finished professional artwork with rich textural realism. ");
 		if(tp==2)
-			{final_script.push("CLOTHES: "+getClothes($("#clothes option:selected").val()));}
+		{
+			final_script.push("CLOTHES: "+getClothes($("#clothes option:selected").val()));
+			if($("#clothes_color").is(":checked"))
+				final_script.push("CLOTHES COLOR : If specific clothing colors are mentioned, treat them as suggestions rather than strict requirements. You may substitute them with other suitable and aesthetically pleasing colors while keeping every other aspect of the outfit exactly the same");
+		}
 		if(tp==3)
 			{final_script.push("POSE: "+getPose($("#pose option:selected").val(),scr_type));}
 		final_script.push("STYLE: high-end semi-realistic anime illustration with strong textural detail, refined character design art blending Japanese light novel illustration depth with Korean webtoon polish (日本ライトノベル × 한국 웹툰 일러스트), top-tier pixiv illustrator quality, 2D hand-painted semi-realistic anime rendering combined with elegant mature anime face proportions, rich painterly shading with smooth gradient blending, detailed light and shadow with proper atmospheric depth, glossy and luminous finish on key surfaces, mature refined anime face proportions on a realistically rendered body, Avoid any 3D game-rendered look, CGI aesthetics, Unreal Engine style, plastic skin, overly sharp game character lighting, or artificial digital-render appearance. The final image should feel like a polished hand-painted semi-realistic illustration, not a video game character render. ");
@@ -351,7 +363,11 @@ function generateMultiText(scr_type, tp)
 		final_script.push("Make it look like a real expensive pre-painted physical collectible figure, not a flat illustration, not a live human cosplay photo, and not a raw game-model screenshot.\r\nEmphasize strong 3D volume, clean sculpted hair strands, refined face paint, crisp clothing folds, premium PVC texture, subtle paint gradients, and realistic material separation.");
 		final_script.push("Place the figure on a simple round display base on a computer desk, with a blurred keyboard and soft monitor glow in the background.\r\nUse professional studio product photography with clean premium studio lighting, soft diffused key light, subtle rim light, realistic shadows, shallow depth of field, and sharp focus on the figure as a physical collectible.");
 		if(tp==2)
-			{final_script.push("CLOTHES: "+getClothes($("#clothes option:selected").val()));}
+		{
+			final_script.push("CLOTHES: "+getClothes($("#clothes option:selected").val()));
+			if($("#clothes_color").is(":checked"))
+				final_script.push("CLOTHES COLOR : If specific clothing colors are mentioned, treat them as suggestions rather than strict requirements. You may substitute them with other suitable and aesthetically pleasing colors while keeping every other aspect of the outfit exactly the same");
+		}
 		if(tp==3)
 			{final_script.push("POSE: 피규어 받침대가 보이는 전신 샷, "+getPose($("#pose option:selected").val(),scr_type));}
 		final_script.push("Facial expression: gentle natural smile, subtle cheerful expression, relaxed happy mood");
@@ -369,6 +385,8 @@ function generateMultiText(scr_type, tp)
 		if(tp==1 || tp==3)
 		{
 			group_script.push("CLOTHES: "+getClothes($("#clothes option:selected").val())+"\r\n");
+			if($("#clothes_color").is(":checked"))
+				group_script.push("CLOTHES COLOR : If specific clothing colors are mentioned, treat them as suggestions rather than strict requirements. You may substitute them with other suitable and aesthetically pleasing colors while keeping every other aspect of the outfit exactly the same");
 		}
 		if(tp==1 || tp==2)
 		{
@@ -466,6 +484,8 @@ function generateCustom()
 		group_script.push("Character "+ i);
 		group_script.push("================");
 		group_script.push("CLOTHES: "+getClothes($("#p"+i).val().split(",")[1])+"\r\n");
+		if($("#clothes_color").is(":checked"))
+			group_script.push("CLOTHES COLOR : If specific clothing colors are mentioned, treat them as suggestions rather than strict requirements. You may substitute them with other suitable and aesthetically pleasing colors while keeping every other aspect of the outfit exactly the same");
 		group_script.push("POSE: "+getPose($("#p"+i).val().split(",")[0],scr_type)+"\r\n");
 	}
 	final_script.push(group_script.join("\r\n"));
